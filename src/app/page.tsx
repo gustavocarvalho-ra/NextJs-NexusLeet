@@ -5,6 +5,8 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h1 className="text-3x1 font-bold underline">TEST TAILWINDCSS</h1>
+
         <Image
           className={styles.logo}
           src="/next.svg"
