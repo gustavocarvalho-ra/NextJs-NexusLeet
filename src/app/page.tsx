@@ -1,10 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import RegisterPage from "./userregister/page";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+
+        <RegisterPage />
+
         <h1 className="text-3x1 font-bold underline">TEST TAILWINDCSS</h1>
 
         <Image

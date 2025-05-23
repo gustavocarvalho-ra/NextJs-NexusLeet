@@ -7,14 +7,14 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+  // const [error, setError] = useState("");
+  // const [success, setSuccess] = useState("");
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
-    setSuccess("");
+    // setError("");
+    // setSuccess("");
 
     const res = await fetch("/api/register", {
       method: "POST",
@@ -22,12 +22,12 @@ export default function RegisterPage() {
       body: JSON.stringify({ name, email, password }),
     })
 
-    const data = await res.json();
+    // const data = await res.json();
 
     if (!res.ok) {
-      setError(data.error || "Erro de cadastro")
+      // setError(data.error || "Erro de cadastro")
     } else {
-      setSuccess("Cadastro realizado com sucesso");
+      // setSuccess("Cadastro realizado com sucesso");
       setEmail("");
       setName("");
       setPassword("");
