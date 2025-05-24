@@ -1,9 +1,9 @@
-import styles from "./page.module.css";
 import RegisterPage from "./userregister/page";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div className="w-100% h-235 bg-amber-100 flex justify-center align-center">
+
       <RegisterPage />
     </div>
   );
