@@ -63,7 +63,7 @@ export default function RegisterForm() {
               onChange={(e) => setPassword(e.target.value)}
               className="bg-red-700 rounded-sm p-2 h-1/9 w-2/3 border-2 border-amber-50"
               />
-            <button type="submit" className="">
+            <button type="submit" className="cursor-pointer">
               Cadastrar
             </button>
             {error && <p className="">{error}</p>}
