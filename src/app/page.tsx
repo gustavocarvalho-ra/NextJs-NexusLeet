@@ -1,7 +1,10 @@
-import RegisterPage from "./userregister/page";
+import RegisterForm from "./components/login/RegisterForm";
 
 export default function Home() {
   return (
-    <RegisterPage />
+    <div className="w-screen h-screen flex">
+      <RegisterForm />
+      <RegisterForm />
+    </div>
   );
 }
