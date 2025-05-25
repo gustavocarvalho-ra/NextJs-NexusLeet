@@ -26,24 +26,31 @@ export default function LoginForm() {
   }
 
   return (
-    <form onSubmit={handleLogin} className="">
-      <input 
-        placeholder="Email" 
-        type="email" 
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-        className=""
-      />
-      <input 
-        placeholder="Senha" 
-        type="password" 
-        value={password}
-        onChange={e => setPassword(e.target.value)}
-        className=""
-      />
-      <button type="submit" className="cursor-pointer">
-        Entrar
-      </button>
-    </form>
+    <div className="w-full h-full bg-amber-100 flex items-center justify-center">
+      <div className="border-double w-xl bg-blue-700 h-5/12">
+        <h1>Login</h1>
+        <div className="h-full w-full">
+          <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-4/5">
+            <input 
+              placeholder="Email" 
+              type="email" 
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              className="bg-red-700 rounded-sm p-2 h-1/9 w-2/3 border-2 border-amber-50"
+            />
+            <input 
+              placeholder="Senha" 
+              type="password" 
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              className="bg-red-700 rounded-sm p-2 h-1/9 w-2/3 border-2 border-amber-50"
+            />
+            <button type="submit" className="cursor-pointer">
+              Entrar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   )
 }
