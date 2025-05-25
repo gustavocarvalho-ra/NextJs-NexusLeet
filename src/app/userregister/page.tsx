@@ -37,37 +37,39 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="border-double w-xl bg-blue-700">
-      <h1>Cadastrar nova conta</h1>
-      <div>
-        <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center ">
-          <input
-            type="text"
-            placeholder="Nome"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="bg-red-700 rounded-sm py-9"
-          />
-          <input
-            type="email"
-            placeholder="E-mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className=""
-          />
-          <input
-            type="password"
-            placeholder="Senha"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className=""
-          />
-          <button type="submit" className="">
-            Cadastrar
-          </button>
-          {error && <p className="">{error}</p>}
-          {success && <p className="">{success}</p>}
-        </form>
+    <div className="w-screen h-screen bg-amber-100 flex items-center justify-center">
+      <div className="border-double w-xl bg-blue-700">
+        <h1>Cadastrar nova conta</h1>
+        <div>
+          <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center">
+            <input
+              type="text"
+              placeholder="Nome"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="bg-red-700 rounded-sm py-9"
+              />
+            <input
+              type="email"
+              placeholder="E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className=""
+              />
+            <input
+              type="password"
+              placeholder="Senha"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className=""
+              />
+            <button type="submit" className="">
+              Cadastrar
+            </button>
+            {error && <p className="">{error}</p>}
+            {success && <p className="">{success}</p>}
+          </form>
+        </div>
       </div>
     </div>
   )
