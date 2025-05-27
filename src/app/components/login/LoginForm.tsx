@@ -41,13 +41,13 @@ export default function LoginForm() {
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
             />
             <div className="">
-              <span></span>
+              <span className="rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"><MdEmail /></span>
               <input 
                 placeholder="Senha" 
                 type="password" 
                 value={password}
                 onChange={e => setPassword(e.target.value)}
-                className="border-b-sky-100 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
+                className="w-full h-full"
               />
             </div>
             <button type="submit" className="cursor-pointer">
