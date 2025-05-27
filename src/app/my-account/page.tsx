@@ -6,8 +6,10 @@ export default function MyAccont() {
   return (
     <div className="w-screen h-screen flex flex-col">
       <Header />
-      <LoginForm />
-      <RegisterForm />
+      <div className="flex">
+        <LoginForm />
+        <RegisterForm />
+      </div>
     </div>
   );
 }
