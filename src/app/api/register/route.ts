@@ -3,8 +3,7 @@ import { prisma } from "@/app/lib/prisma";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  const body = await req.json();
-  const { name, email, password } = body;
+  const { name, email, password } = await req.json();
 
   if (!email || !password) {
     return NextResponse.json({ error: "Email e senha são obrigatórios "}, { status: 400 })
@@ -29,5 +28,5 @@ export async function POST(req: Request) {
     }
   });
 
-  return NextResponse.json({ message: "Usuário cadastrado com sucesso", user });
+  return NextResponse.json({ message: "Usuário cadastrado com sucesso", user }, {status: 201});
 }
