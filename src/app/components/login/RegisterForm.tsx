@@ -33,7 +33,7 @@ export default function RegisterForm() {
       setPassword("");
 
       // setTimeout(() => router.push("/login"), 1500);
-      router.replace("/login")
+      router.replace("/my-account/user")
     }
   }
 
