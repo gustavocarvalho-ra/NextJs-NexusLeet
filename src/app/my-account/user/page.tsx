@@ -1,12 +1,15 @@
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/lib/auth';
-import { redirect } from 'next/navigation';
+// import { redirect } from 'next/navigation';
 
 export default async function MyAccontUser() {
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    redirect("/usuarionaologado");
+    return (
+      <h1>erro de sessão</h1>
+    )
+    // redirect("/usuarionaologado");
   }
 
   return (
