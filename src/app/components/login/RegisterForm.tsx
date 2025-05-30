@@ -32,7 +32,8 @@ export default function RegisterForm() {
       setName("");
       setPassword("");
 
-      setTimeout(() => router.push("/login"), 1500)
+      // setTimeout(() => router.push("/login"), 1500);
+      router.replace("/login")
     }
   }
 
