@@ -22,7 +22,7 @@ export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   session: { strategy: 'jwt' },
   pages: {
-    signIn: '/login',
+    signIn: '/test',
   },
   providers: [
     CredentialsProvider({
@@ -32,13 +32,28 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
+        // ⚠️ LOG PARA DEBUG
+        console.log(">>> AUTHORIZING", credentials)
+        // ⚠️ LOG PARA DEBUG
         if (!credentials?.email || !credentials.password) return null
 
         const user = await prisma.user.findUnique({
           where: { email: credentials.email },
         })
 
-        if (!user || !(await compare(credentials.password, user.password))) return null
+        if (!user) {
+          console.log("Usuário não encontrado")
+          return null
+        }
+
+        const isValid = await compare(credentials.password, user.password)
+
+        if (!isValid) {
+          console.log("Senha incorreta")
+          return null
+        }
+
+        console.log("Login bem-sucedido:", user.email)
 
         return user
       },
