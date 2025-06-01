@@ -7,20 +7,21 @@ v1 - ✔
 - Introduzir formulário de registro e login para o BD ✔
 - Introduzir a "session" de usuário ✔
 
-v2 - 
+Tasks - 
 
+- Introduzir o "USER ADMIN"
+- Introduzir o dashboard
 - Introduzir botão para sair da sessão de usuário
+- Introduzir os produtos do BD
+- Criar as páginas de produtos
+- Introduzir o carrinho de compra 
+- Introduzir pesquisa de produto 
+- Introduzir o link de detalhamento do produto 
 
 
-v3 -
+v2 -
 
-- Introduzir os produtos ao BD
-- Introduzido o carrinho de compra 
-- Introduzido pesquisa de produto 
-- Introduzido o link de detalhamento do produto 
-
-v4 -
-
+- {...}
 - Adicionar responsividade 
 
 ## Stack utilizada
