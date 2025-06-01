@@ -10,9 +10,9 @@ export default async function Header() {
   if (!session) {
     return (
       <div className="w-full h-20 bg-amber-400 flex items-center justify-evenly">
-        <Link href={"/"} className="text-amber-600">Nexus Leet</Link>
-        <input />
-        <Link href={"/my-account"}>Login</Link>
+        <Link href={"/"} className="text-amber-600 font-black text-4xl">Nexus Leet</Link>
+        <input placeholder='Buscar produto' className='bg-cyan-200 w-1/3 h-8 pl-2.5'/>
+        <Link href={"/my-account"} className='font-black'>Login</Link>
       </div>
     )
   }
