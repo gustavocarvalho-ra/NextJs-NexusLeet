@@ -24,9 +24,9 @@ v4 -
 - Adicionar responsividade 
 
 ## Stack utilizada
-Next.js
-Typescript
-Tailwindcss
-Prisma
-SQlite
-Eslint
+- Next.js
+- Typescript
+- Tailwindcss
+- Prisma
+- SQlite
+- Eslint
