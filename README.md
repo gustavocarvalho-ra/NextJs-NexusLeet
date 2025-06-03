@@ -6,18 +6,19 @@ v1 - ✔
 - Introduzir os primeiros passos do Back-End ✔
 - Introduzir formulário de registro e login para o BD ✔
 - Introduzir a "session" de usuário ✔
+- Introduzir singIn automático após o cadastro de usuário ✔
 
 Tasks - 
 
-- Introduzir confirmação de senha
-- Introduzir o "USER ADMIN"
-- Introduzir o dashboard
+- Introduzir confirmação de senha no cadastro
+- Introduzir "USER ADMIN"
+- Introduzir dashboard
 - Introduzir botão para sair da sessão de usuário
 - Introduzir os produtos do BD
 - Criar as páginas de produtos
-- Introduzir o carrinho de compra 
+- Introduzir carrinho de compra 
 - Introduzir pesquisa de produto 
-- Introduzir o link de detalhamento do produto 
+- Introduzir link de detalhamento do produto 
 
 
 v2 -
@@ -28,7 +29,7 @@ v2 -
 ## Stack utilizada
 - Next.js
 - Typescript
-- Tailwindcss
+- TailwindCSS
 - Prisma
 - SQlite
 - Eslint
