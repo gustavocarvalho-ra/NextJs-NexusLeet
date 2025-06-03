@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import { signIn } from 'next-auth/react';
 
 export default function RegisterForm() {
   const [email, setEmail] = useState("");
@@ -27,6 +28,9 @@ export default function RegisterForm() {
     if (!res.ok) {
       setError(data.error || "Erro de cadastro")
     } else {
+      const loginResult = await signIn("credentials", {
+        
+      })
       setSuccess("Cadastro realizado com sucesso");
       setEmail("");
       setName("");
