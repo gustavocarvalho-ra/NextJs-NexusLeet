@@ -5,12 +5,15 @@ import { useRouter } from "next/navigation"
 import { signIn } from 'next-auth/react';
 
 export default function RegisterForm() {
+
+  const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,24 +23,32 @@ export default function RegisterForm() {
     const res = await fetch("/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify(form),
     })
 
     const data = await res.json();
 
-    if (!res.ok) {
-      setError(data.error || "Erro de cadastro")
-    } else {
+    if (res.ok) {
       const loginResult = await signIn("credentials", {
-        
+        redirect: false,
+        email: form.email,
+        password: form.password,
       })
-      setSuccess("Cadastro realizado com sucesso");
-      setEmail("");
-      setName("");
-      setPassword("");
 
-      // setTimeout(() => router.push("/login"), 1500);
-      router.replace("/my-account/user")
+      if (loginResult?.ok) {
+        setSuccess("Cadastro realizado com sucesso");
+        router.push("/my-account/user")
+        // // setTimeout(() => router.push("/login"), 1500);
+      } else {
+        console.error("Login automático falhou")
+      }
+      // setEmail("");
+      // setName("");
+      // setPassword("");
+
+      // router.push("/my-account/user")
+    } else {
+      console.error("Erro de cadastro")
     }
   }
 
@@ -51,21 +62,21 @@ export default function RegisterForm() {
               type="text"
               placeholder="Nome"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setForm({...form, name: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
             <input
               type="email"
               placeholder="E-mail"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setForm({...form, email: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
             <input
               type="password"
               placeholder="Senha"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setForm({...form, password: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
             <button type="submit" className="cursor-pointer">
