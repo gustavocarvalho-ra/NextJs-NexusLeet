@@ -9,9 +9,9 @@ export default function RegisterForm() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
   const router = useRouter();
 
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [name, setName] = useState("");
+  // const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -26,7 +26,7 @@ export default function RegisterForm() {
       body: JSON.stringify(form),
     })
 
-    const data = await res.json();
+    // const data = await res.json();
 
     if (res.ok) {
       const loginResult = await signIn("credentials", {
@@ -61,21 +61,21 @@ export default function RegisterForm() {
             <input
               type="text"
               placeholder="Nome"
-              value={name}
+              value={form.name}
               onChange={(e) => setForm({...form, name: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
             <input
               type="email"
               placeholder="E-mail"
-              value={email}
+              value={form.email}
               onChange={(e) => setForm({...form, email: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
             <input
               type="password"
               placeholder="Senha"
-              value={password}
+              value={form.password}
               onChange={(e) => setForm({...form, password: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
