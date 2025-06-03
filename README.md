@@ -9,6 +9,7 @@ v1 - ✔
 
 Tasks - 
 
+- Introduzir confirmação de senha
 - Introduzir o "USER ADMIN"
 - Introduzir o dashboard
 - Introduzir botão para sair da sessão de usuário
