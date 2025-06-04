@@ -12,13 +12,13 @@ export default async function Header() {
 
   if (!session) {
     return (
-      <div className="w-full h-20 bg-amber-400 flex items-center justify-evenly">
+      <div className="w-full h-20 bg-black flex items-center justify-evenly">
         <Link href={"/"} className="text-amber-600 font-black text-4xl">Nexus Leet</Link>
         <input placeholder='Buscar produto' className='bg-cyan-200 w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
-          <Link href={"/my-account"} className='font-medium flex items-center'>
-            <FaRegUser />
-            <div className='flex flex-col m-1 font'>
-              <p><span className='font-black'>Olá! Fassa login</span></p>
+          <Link href={"/my-account"} className='flex items-center'>
+            <FaRegUser className='text-3xl' />
+            <div className='flex flex-col pl-2 font-extralight text-[12px]'>
+              <p><span className='font-black'>Olá! Faça login</span></p>
               <p >Ou Cadastre-se</p>
             </div>
           </Link>
