@@ -27,7 +27,7 @@ export default async function Header() {
   }
 
   return (
-    <div className="w-full h-20 bg-amber-400 flex items-center justify-evenly">
+    <div className="w-full h-20 bg-black flex items-center justify-evenly">
       <Link href={"/"} className="text-amber-600 font-black text-4xl">Nexus Leet</Link>
       <input placeholder='Buscar produto' className='bg-cyan-200 w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
       <p>Bem vindo, {session.user?.name}!</p>
