@@ -1,6 +1,7 @@
 // "use client"
 import { getServerSession } from 'next-auth';
 import Link from "next/link"
+import Nav from '../Navbar';
 
 import { authOptions } from '@/app/lib/auth';
 
