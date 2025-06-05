@@ -12,7 +12,7 @@ export default async function Header() {
 
   if (!session) {
     return (
-      <div className="w-full h-20 bg-black flex items-center justify-evenly">
+      <div className="w-full min-h-26 bg-black flex items-center justify-evenly">
         <Link href={"/"} className="text-amber-600 font-black text-4xl">
           Nexus Leet
         </Link>
@@ -31,7 +31,7 @@ export default async function Header() {
   }
 
   return (
-    <div className="w-full h-20 bg-black flex items-center justify-evenly">
+    <div className="w-full min-h-26 bg-black flex items-center justify-evenly">
       <Link href={"/"} className="text-amber-600 font-black text-4xl">
         Nexus Leet
       </Link>
