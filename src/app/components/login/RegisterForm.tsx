@@ -20,6 +20,8 @@ export default function RegisterForm() {
     setError("");
     setSuccess("");
 
+    
+
     const res = await fetch("/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -86,8 +88,8 @@ export default function RegisterForm() {
               type="password"
               placeholder="Confirme sua senha"
               required
-              value={form.password}
-              onChange={(e) => setForm({...form, password: e.target.value})}
+              value={form.confirmPassword}
+              onChange={(e) => setForm({...form, confirmPassword: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
             <button type="submit" className="cursor-pointer">
