@@ -7,11 +7,8 @@ import { signIn } from 'next-auth/react';
 export default function RegisterForm() {
 
   const [form, setForm] = useState({ name: "", email: "", password: "", confirmPassword: "" });
+  const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
-
-  // const [email, setEmail] = useState("");
-  // const [name, setName] = useState("");
-  // const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -64,7 +61,7 @@ export default function RegisterForm() {
         <div className="h-full w-full">
           <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-4/5">
             <input
-              type="text"
+              type={"text"}
               placeholder="Nome"
               required
               value={form.name}
@@ -79,22 +76,33 @@ export default function RegisterForm() {
               onChange={(e) => setForm({...form, email: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
-            <input
-              type="password"
-              placeholder="Senha"
-              required
-              value={form.password}
-              onChange={(e) => setForm({...form, password: e.target.value})}
-              className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
-              />
-            <input
-              type="password"
-              placeholder="Confirme sua senha"
-              required
-              value={form.confirmPassword}
-              onChange={(e) => setForm({...form, confirmPassword: e.target.value})}
-              className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
-              />
+            <div className="input">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Senha"
+                required
+                value={form.password}
+                onChange={(e) => setForm({...form, password: e.target.value})}
+                className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
+                />
+            </div>
+            <div className="input">
+              <input
+                type="password"
+                placeholder="Confirme sua senha"
+                required
+                value={form.confirmPassword}
+                onChange={(e) => setForm({...form, confirmPassword: e.target.value})}
+                className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
+                />
+              <button
+                type="button"
+                className="toggle-password"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? "👁️" : "👁️‍🗨️"}
+              </button>
+            </div>
             <button type="submit" className="cursor-pointer">
               Cadastrar
             </button>
