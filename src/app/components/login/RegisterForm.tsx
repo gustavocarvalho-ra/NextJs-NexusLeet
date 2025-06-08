@@ -59,7 +59,7 @@ export default function RegisterForm() {
 
   return (
     <div className="w-full h-full bg-amber-100 flex items-center justify-center">
-      <div className="border-double w-xl bg-blue-700 h-5/12">
+      <div className="border-double rounded-lg p-3 w-xl bg-amber-950 h-5/12 flex flex-col justify-center">
         <h1 className="flex justify-center text-cyan-200 text-3xl">Cadastrar nova conta</h1>
         <div className="h-full w-full">
           <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-4/5">
