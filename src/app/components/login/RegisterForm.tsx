@@ -8,6 +8,7 @@ export default function RegisterForm() {
 
   const [form, setForm] = useState({ name: "", email: "", password: "", confirmPassword: "" });
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const router = useRouter();
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -76,7 +77,7 @@ export default function RegisterForm() {
               onChange={(e) => setForm({...form, email: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
-            <div className="input">
+            <div className="relative">
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Senha"
@@ -87,15 +88,15 @@ export default function RegisterForm() {
                 />
               <button
                 type="button"
-                className="toggle-password"
+                className=""
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? "👁️" : "👁️‍🗨️"}
               </button>
             </div>
-            <div className="input">
+            <div className="relative">
               <input
-                type={showPassword ? "text" : "password"}
+                type={showConfirmPassword ? "text" : "password"}
                 placeholder="Confirme sua senha"
                 required
                 value={form.confirmPassword}
@@ -104,10 +105,10 @@ export default function RegisterForm() {
                 />
               <button
                 type="button"
-                className="toggle-password"
-                onClick={() => setShowPassword(!showPassword)}
+                className=""
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
-                {showPassword ? "👁️" : "👁️‍🗨️"}
+                {showConfirmPassword ? "👁️" : "👁️‍🗨️"}
               </button>
             </div>
             <button type="submit" className="cursor-pointer">
