@@ -1,16 +1,16 @@
 # Projeto Full-Stack de uma loja de roupas fictícia chamada "Nexus Leet"
 
 
-v1 - ✔
+Completed Tasks - ✔
 
 - Introduzir os primeiros passos do Back-End ✔
 - Introduzir formulário de registro e login para o BD ✔
 - Introduzir a "session" de usuário ✔
 - Introduzir singIn automático após o cadastro de usuário ✔
+- Introduzir confirmação de senha no cadastro ✔
 
 Tasks - 
 
-- Introduzir confirmação de senha no cadastro
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
 - Introduzir botão para sair da sessão de usuário
