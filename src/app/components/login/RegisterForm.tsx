@@ -85,10 +85,17 @@ export default function RegisterForm() {
                 onChange={(e) => setForm({...form, password: e.target.value})}
                 className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
                 />
+              <button
+                type="button"
+                className="toggle-password"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? "👁️" : "👁️‍🗨️"}
+              </button>
             </div>
             <div className="input">
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="Confirme sua senha"
                 required
                 value={form.confirmPassword}
