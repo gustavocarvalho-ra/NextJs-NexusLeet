@@ -6,7 +6,7 @@ import { signIn } from 'next-auth/react';
 
 export default function RegisterForm() {
 
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const [form, setForm] = useState({ name: "", email: "", password: "", confirmPassword: "" });
   const router = useRouter();
 
   // const [email, setEmail] = useState("");
@@ -20,7 +20,10 @@ export default function RegisterForm() {
     setError("");
     setSuccess("");
 
-    
+    if (form.password !== form.confirmPassword) {
+      setError("As senhas não coincidem!");
+      return;
+    }
 
     const res = await fetch("/api/auth/register", {
       method: "POST",
