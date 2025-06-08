@@ -61,6 +61,7 @@ export default function RegisterForm() {
             <input
               type="text"
               placeholder="Nome"
+              required
               value={form.name}
               onChange={(e) => setForm({...form, name: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
@@ -68,6 +69,7 @@ export default function RegisterForm() {
             <input
               type="email"
               placeholder="E-mail"
+              required
               value={form.email}
               onChange={(e) => setForm({...form, email: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
@@ -75,6 +77,15 @@ export default function RegisterForm() {
             <input
               type="password"
               placeholder="Senha"
+              required
+              value={form.password}
+              onChange={(e) => setForm({...form, password: e.target.value})}
+              className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
+              />
+            <input
+              type="password"
+              placeholder="Confirme sua senha"
+              required
               value={form.password}
               onChange={(e) => setForm({...form, password: e.target.value})}
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
