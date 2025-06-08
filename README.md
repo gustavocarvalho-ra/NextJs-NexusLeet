@@ -8,10 +8,10 @@ Completed Tasks - ✔
 - Introduzir a "session" de usuário ✔
 - Introduzir singIn automático após o cadastro de usuário ✔
 - Introduzir confirmação de senha no cadastro ✔
+- Introduzir botão para vizualizar a senha já digitada ✔
 
 Tasks - 
 
-- Introduzir botão para vizualizar a senha já digitada
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
 - Introduzir botão para sair da sessão de usuário
