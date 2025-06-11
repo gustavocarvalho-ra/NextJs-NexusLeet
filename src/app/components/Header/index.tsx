@@ -21,7 +21,7 @@ export default async function Header() {
 
           <input placeholder='Buscar produto' className='bg-(--color-sec) hover:bg-() w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
 
-          <Link href={"/my-account"} className='flex items-center'>
+          <Link href={"/my-account"} className='flex items-center text-(--text-amber)'>
             <FaRegUser className='text-3xl' />
             <div className='flex flex-col pl-2 font-extralight text-[12px]'>
               <p><span className='font-black'>Olá! Faça login</span></p>
