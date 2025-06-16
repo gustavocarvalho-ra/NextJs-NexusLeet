@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { signIn } from 'next-auth/react';
+import { Input } from "../ui/input";
 
 export default function RegisterForm() {
 
@@ -61,34 +62,31 @@ export default function RegisterForm() {
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold">Cadastro</h1>
         <div className="h-full w-full">
           <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-4/5">
-            <input
+            <Input
               id="name"
               type={"text"}
               placeholder="Nome"
               required
               value={form.name}
               onChange={(e) => setForm({...form, name: e.target.value})}
-              className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
-            <input
+            <Input
               id="email"
               type="email"
               placeholder="E-mail"
               required
               value={form.email}
               onChange={(e) => setForm({...form, email: e.target.value})}
-              className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
-              />
+            />
             <div className="relative">
-              <input
+              <Input
                 id="password"
                 type={showPassword ? "text" : "password"}
                 placeholder="Senha"
                 required
                 value={form.password}
                 onChange={(e) => setForm({...form, password: e.target.value})}
-                className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
-                />
+              />
               <button
                 type="button"
                 className=""
@@ -98,14 +96,13 @@ export default function RegisterForm() {
               </button>
             </div>
             <div className="relative">
-              <input
+              <Input
                 id="confirmPassword"
                 type={showConfirmPassword ? "text" : "password"}
                 placeholder="Confirme sua senha"
                 required
                 value={form.confirmPassword}
                 onChange={(e) => setForm({...form, confirmPassword: e.target.value})}
-                className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
                 />
               <button
                 type="button"
