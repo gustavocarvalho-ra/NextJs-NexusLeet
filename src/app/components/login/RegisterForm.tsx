@@ -62,6 +62,7 @@ export default function RegisterForm() {
         <div className="h-full w-full">
           <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-4/5">
             <input
+              id="name"
               type={"text"}
               placeholder="Nome"
               required
@@ -70,6 +71,7 @@ export default function RegisterForm() {
               className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
               />
             <input
+              id="email"
               type="email"
               placeholder="E-mail"
               required
@@ -79,6 +81,7 @@ export default function RegisterForm() {
               />
             <div className="relative">
               <input
+                id="password"
                 type={showPassword ? "text" : "password"}
                 placeholder="Senha"
                 required
@@ -96,6 +99,7 @@ export default function RegisterForm() {
             </div>
             <div className="relative">
               <input
+                id="confirmPassword"
                 type={showConfirmPassword ? "text" : "password"}
                 placeholder="Confirme sua senha"
                 required

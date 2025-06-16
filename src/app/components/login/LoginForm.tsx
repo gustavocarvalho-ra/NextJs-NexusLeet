@@ -32,8 +32,9 @@ export default function LoginForm() {
       <div className="border-double rounded-lg bg-slate-500/15 p-3 w-xl h-5/12 flex flex-col justify-center">
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold">Login</h1>
         <div className="h-full w-full">
-          <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-4/5">
+          <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-full justify-center">
             <input 
+              id="email"
               placeholder="Email" 
               type="email" 
               value={email}
@@ -41,6 +42,7 @@ export default function LoginForm() {
               className="bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
             />
             <input 
+              id="password"
               placeholder="Senha" 
               type="password" 
               value={password}
