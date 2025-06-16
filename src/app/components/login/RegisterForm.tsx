@@ -61,7 +61,7 @@ export default function RegisterForm() {
       <div className="border-double rounded-lg p-3 w-xl bg-slate-500/15 h-5/12 flex flex-col justify-center">
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold">Cadastro</h1>
         <div className="h-full w-full">
-          <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-4/5">
+          <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-full justify-center">
             <Input
               id="name"
               type={"text"}
@@ -78,7 +78,7 @@ export default function RegisterForm() {
               value={form.email}
               onChange={(e) => setForm({...form, email: e.target.value})}
             />
-            <div className="relative">
+            <div className="relative bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50">
               <Input
                 id="password"
                 type={showPassword ? "text" : "password"}
@@ -95,7 +95,7 @@ export default function RegisterForm() {
                 {showPassword ? "👁️" : "👁️‍🗨️"}
               </button>
             </div>
-            <div className="relative">
+            <div className="relative bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50">
               <Input
                 id="confirmPassword"
                 type={showConfirmPassword ? "text" : "password"}
