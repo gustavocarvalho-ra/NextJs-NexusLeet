@@ -3,7 +3,7 @@
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { MdEmail } from "react-icons/md";
+// import { MdEmail } from "react-icons/md";
 
 
 export default function LoginForm() {
@@ -29,7 +29,7 @@ export default function LoginForm() {
 
   return (
     <div className="w-full h-full flex items-center justify-center">
-      <div className="border-double rounded-lg bg-(--bg-sec) p-3 w-xl h-5/12 flex flex-col justify-center">
+      <div className="border-double rounded-lg bg-slate-500/15 p-3 w-xl h-5/12 flex flex-col justify-center">
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold">Login</h1>
         <div className="h-full w-full">
           <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-4/5">
@@ -38,20 +38,15 @@ export default function LoginForm() {
               type="email" 
               value={email}
               onChange={e => setEmail(e.target.value)}
-              className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
+              className="bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
             />
-            <div className="bg-red-700 rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50 flex ">
-              <span className="h-full w-full border-none">
-                <input 
-                  placeholder="Senha" 
-                  type="password" 
-                  value={password}
-                  onChange={e => setPassword(e.target.value)}
-                  className="w-full h-full"
-                />
-                <MdEmail />
-              </span>
-            </div>
+            <input 
+              placeholder="Senha" 
+              type="password" 
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              className="bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50"
+            />
             <button type="submit" className="cursor-pointer">
               Entrar
             </button>
