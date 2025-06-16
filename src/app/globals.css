@@ -8,7 +8,7 @@
   --foreground: #171717;
   --text-amber: #e17100;
   --color-sec: #e8e8e8;
-  --hover-pr: rgb(124, 214, 236);
+  --hover-pr: rgba(124, 213, 236, 0.836);
 }
 
 
@@ -23,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  background: var(--background);
+  background: var(--color-sec);
 }
 
 * {
