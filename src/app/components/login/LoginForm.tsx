@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Input } from "../ui/input";
-// import { MdEmail } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 
 
 export default function LoginForm() {
@@ -34,13 +34,15 @@ export default function LoginForm() {
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold">Login</h1>
         <div className="h-full w-full">
           <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-full justify-center">
-            <Input 
-              id="email"
-              placeholder="Email" 
-              type="email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-            />
+            <div className="bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2">
+              <Input 
+                id="email"
+                type="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
+              <MdEmail />
+            </div>
             <Input 
               id="password"
               placeholder="Senha" 
