@@ -100,7 +100,7 @@ export default function RegisterForm() {
                 className=""
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? "👁️" : "👁️‍🗨️"}
+                {showPassword ? <PiEye className="text-2xl"/> : <PiEyeClosedLight className="text-2xl"/>}
               </button>
             </div>
             <div className="bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 flex items-center">
@@ -117,7 +117,7 @@ export default function RegisterForm() {
                 className=""
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
-                {showConfirmPassword ? "👁️" : "👁️‍🗨️"}
+                {showConfirmPassword ? <PiEye className="text-2xl"/> : <PiEyeClosedLight className="text-2xl"/>}
               </button>
             </div>
             <button type="submit" className="cursor-pointer">
