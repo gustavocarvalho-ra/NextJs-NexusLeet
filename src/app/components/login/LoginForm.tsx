@@ -41,7 +41,7 @@ export default function LoginForm() {
               type="email"
               placeholder="Email"
               value={email}
-              onChange={e => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               icon={MdOutlineMail}
             />
             <DivInputIcon
@@ -49,7 +49,7 @@ export default function LoginForm() {
               type="password" 
               placeholder="Senha" 
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               icon={RiLockPasswordLine}
             />
             <button type="submit" className="cursor-pointer">
