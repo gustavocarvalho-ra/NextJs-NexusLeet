@@ -3,9 +3,9 @@
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Input } from "../ui/Input";
 import { MdOutlineMail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { DivInputIcon } from "../ui/DivInputIcon";
 
 
 
@@ -36,26 +36,22 @@ export default function LoginForm() {
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold">Login</h1>
         <div className="h-full w-full">
           <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-full justify-center">
-            <div className="bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 flex items-center">
-              <Input 
-                id="email"
-                placeholder="Email"
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-              <MdOutlineMail className="text-2xl" />
-            </div>
-            <div className="bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 flex items-center">
-              <Input 
-                id="password"
-                placeholder="Senha" 
-                type="password" 
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-              />
-              <RiLockPasswordLine className="text-2xl" />
-            </div>
+            <DivInputIcon
+              id="email"
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              icon={MdOutlineMail}
+            />
+            <DivInputIcon
+              id="password"
+              type="password" 
+              placeholder="Senha" 
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              icon={RiLockPasswordLine}
+            />
             <button type="submit" className="cursor-pointer">
               Entrar
             </button>
