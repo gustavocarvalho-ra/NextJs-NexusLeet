@@ -4,6 +4,12 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { signIn } from 'next-auth/react';
 import { Input } from "../ui/Input";
+import { DivInputIcon } from "../ui/DivInputIcon";
+import { FaRegUser } from "react-icons/fa";
+import { MdOutlineMail } from "react-icons/md";
+import { PiEye } from "react-icons/pi";
+import { PiEyeClosedLight } from "react-icons/pi";
+
 
 export default function RegisterForm() {
 
@@ -62,23 +68,25 @@ export default function RegisterForm() {
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold">Cadastro</h1>
         <div className="h-full w-full">
           <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-full justify-center">
-            <Input
+            <DivInputIcon
               id="name"
               type={"text"}
               placeholder="Nome"
               required
               value={form.name}
               onChange={(e) => setForm({...form, name: e.target.value})}
+              icon={FaRegUser}
               />
-            <Input
+            <DivInputIcon
               id="email"
               type="email"
               placeholder="E-mail"
               required
               value={form.email}
               onChange={(e) => setForm({...form, email: e.target.value})}
+              icon={MdOutlineMail}
             />
-            <div className="relative bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50">
+            <div className="bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 flex items-center">
               <Input
                 id="password"
                 type={showPassword ? "text" : "password"}
@@ -95,7 +103,7 @@ export default function RegisterForm() {
                 {showPassword ? "👁️" : "👁️‍🗨️"}
               </button>
             </div>
-            <div className="relative bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 border-amber-50">
+            <div className="bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 flex items-center">
               <Input
                 id="confirmPassword"
                 type={showConfirmPassword ? "text" : "password"}
