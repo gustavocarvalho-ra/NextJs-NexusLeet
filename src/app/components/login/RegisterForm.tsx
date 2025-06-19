@@ -65,7 +65,7 @@ export default function RegisterForm() {
 
   return (
     <div className="w-full h-full flex items-center justify-center">
-      <div className="border-double rounded-lg p-3 w-xl bg-slate-500/15 h-2/3 flex flex-col justify-center relative">
+      <div className="border-double rounded-lg p-3 w-xl bg-slate-500/15 h-1/2 flex flex-col justify-center relative">
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold">Cadastro</h1>
         <div className="h-full w-full">
           <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-full justify-center">
@@ -87,7 +87,7 @@ export default function RegisterForm() {
               onChange={(e) => setForm({...form, email: e.target.value})}
               icon={MdOutlineMail}
             />
-            <div className="border-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 flex items-center">
+            <div className="border-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
               <Input
                 id="password"
                 type={showPassword ? "text" : "password"}
@@ -104,7 +104,7 @@ export default function RegisterForm() {
                 {showPassword ? <PiEye className="text-2xl"/> : <PiEyeClosedLight className="text-2xl"/>}
               </button>
             </div>
-            <div className="border-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 flex items-center">
+            <div className="border-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
               <Input
                 id="confirmPassword"
                 type={showConfirmPassword ? "text" : "password"}
