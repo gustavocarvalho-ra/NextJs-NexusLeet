@@ -8,12 +8,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         type={type}
-        className={` ${className}`}
+        className={`w-1/3 h-4 bg-(--color-sec) ${className}`}
         {...props}
       />
-    )
+    );
   }
-)
+);
 
 Button.displayName = "Button"
 
