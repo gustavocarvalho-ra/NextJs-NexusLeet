@@ -8,13 +8,13 @@ interface DivInputIconProps extends React.InputHTMLAttributes<HTMLInputElement> 
 const DivInputIcon = React.forwardRef<HTMLInputElement, DivInputIconProps>(
   ({ className, icon: IconComponent, ...props }, ref) => {
     return (
-      <div className="bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 border-2 flex items-center">
+      <div className="border-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-2/13 w-2/3 flex items-center">
         <Input
           ref={ref}
           className={className}
           {...props}
         />
-        <IconComponent className="text-2xl" />
+        <IconComponent className="text-2xl hover:text-(--text-amber)" />
       </div>
     );
   }
