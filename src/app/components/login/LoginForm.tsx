@@ -6,6 +6,7 @@ import { useState } from "react";
 import { MdOutlineMail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { DivInputIcon } from "../ui/DivInputIcon";
+import { Button } from "../ui/ButtonForm";
 
 
 
@@ -52,9 +53,9 @@ export default function LoginForm() {
               onChange={(e) => setPassword(e.target.value)}
               icon={RiLockPasswordLine}
             />
-            <button type="submit" className="cursor-pointer">
+            <Button type="submit">
               Entrar
-            </button>
+            </Button>
           </form>
         </div>
       </div>
