@@ -8,7 +8,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         type={type}
-        className={`w-1/3 h-4 bg-(--color-sec) ${className}`}
+        className={`w-1/3 h-8 border-2 rounded-sm font-medium cursor-pointer bg-(--color-sec) hover:bg-(--text-amber) absolute bottom-0 ${className}`}
         {...props}
       />
     );

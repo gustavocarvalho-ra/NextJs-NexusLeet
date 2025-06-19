@@ -36,7 +36,7 @@ export default function LoginForm() {
       <div className="border-2 border-(--text-amber) rounded-lg bg-slate-500/15 p-3 w-xl h-5/12 flex flex-col justify-center">
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold">Login</h1>
         <div className="h-full w-full">
-          <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-full justify-center">
+          <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-full justify-center relative">
             <DivInputIcon
               id="email"
               type="email"
