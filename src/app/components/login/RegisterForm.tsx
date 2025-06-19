@@ -65,7 +65,7 @@ export default function RegisterForm() {
 
   return (
     <div className="w-full h-full flex items-center justify-center">
-      <div className="border-double rounded-lg p-3 w-xl bg-slate-500/15 h-5/12 flex flex-col justify-center relative">
+      <div className="border-double rounded-lg p-3 w-xl bg-slate-500/15 h-2/3 flex flex-col justify-center relative">
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold">Cadastro</h1>
         <div className="h-full w-full">
           <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-full justify-center">
