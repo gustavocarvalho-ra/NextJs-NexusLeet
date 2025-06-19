@@ -14,7 +14,7 @@ export default async function MyAccont() {
     return (
       <div className="w-screen h-screen flex flex-col">
         <Header />
-        <div className="flex w-screen h-screen">
+        <div className="flex w-screen h-screen bg-(--bg-test)">
           <LoginForm />
           <RegisterForm />
         </div>
