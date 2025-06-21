@@ -2,10 +2,10 @@
 import { getServerSession } from 'next-auth';
 import Link from "next/link"
 import Nav from '../Navbar';
-
 import { authOptions } from '@/app/lib/auth';
 
 import { FaRegUser } from "react-icons/fa";
+import { signOut } from 'next-auth/react';
 
 
 export default async function Header() {
