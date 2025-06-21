@@ -40,9 +40,12 @@ export default async function Header() {
         Nexus Leet
       </Link>
       
-      <input placeholder='Buscar produto' className='bg-cyan-200 w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
+      <input placeholder='Buscar produto' className='bg-(--color-sec) w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
 
-      <Link href={"/my-account/user"}>Bem vindo, {session.user?.name}!</Link>
+      <Link className='text-white' href={"/my-account/user"}>
+        <FaRegUser className='text-3xl' />
+        Bem vindo, {session.user?.name}!
+      </Link>
     </div>
   )
 }
