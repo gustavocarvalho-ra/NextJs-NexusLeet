@@ -14,7 +14,7 @@ const DivInputIcon = React.forwardRef<HTMLInputElement, DivInputIconProps>(
           className={className}
           {...props}
         />
-        <IconComponent className="text-2xl hover:text-(--text-amber)" />
+        <IconComponent className="text-2xl hover:text-(--text-amber) cursor-pointer" />
       </div>
     );
   }
