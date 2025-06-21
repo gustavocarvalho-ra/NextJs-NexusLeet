@@ -101,7 +101,7 @@ export default function RegisterForm() {
                 className=""
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? <PiEye className="text-2xl"/> : <PiEyeClosedLight className="text-2xl"/>}
+                {showPassword ? <PiEye className="text-2xl hover:text-(--text-amber)"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber)"/>}
               </button>
             </div>
             <div className="border-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
@@ -118,7 +118,7 @@ export default function RegisterForm() {
                 className=""
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
-                {showConfirmPassword ? <PiEye className="text-2xl"/> : <PiEyeClosedLight className="text-2xl"/>}
+                {showConfirmPassword ? <PiEye className="text-2xl hover:text-(--text-amber)"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber)"/>}
               </button>
             </div>
             <Button type="submit">
