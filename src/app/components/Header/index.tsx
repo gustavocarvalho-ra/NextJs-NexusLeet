@@ -5,7 +5,7 @@ import Nav from '../Navbar';
 import { authOptions } from '@/app/lib/auth';
 
 import { FaRegUser } from "react-icons/fa";
-import { signOut } from 'next-auth/react';
+// import { signOut } from 'next-auth/react';
 
 
 export default async function Header() {
@@ -42,10 +42,15 @@ export default async function Header() {
       
       <input placeholder='Buscar produto' className='bg-(--color-sec) w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
 
-      <Link className='text-white' href={"/my-account/user"}>
-        <FaRegUser className='text-3xl' />
-        Bem vindo, {session.user?.name}!
-      </Link>
+      <div>
+        <Link className='text-white' href={"/my-account/user"}>
+          <FaRegUser className='text-3xl' />
+          Bem vindo, {session.user?.name}!
+        </Link>
+        {/* <button onClick={() => signOut()}>
+          Sair
+        </button> */}
+      </div>
     </div>
   )
 }
