@@ -2,7 +2,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/lib/auth';
 import Header from '@/app/components/Header';
 import { redirect } from 'next/navigation';
-import Modal from './../../components/ui/ModalHr';
+import Modal from '../../components/ui/ButtonSignOut.tsx';
 
 export default async function MyAccontUser() {
   const session = await getServerSession(authOptions);
