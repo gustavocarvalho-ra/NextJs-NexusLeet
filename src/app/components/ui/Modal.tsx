@@ -1,15 +1,17 @@
 
 interface ModalProps {
-  isOpen?:boolean;
+  isOpen?:void;
   onClose?: () => void;
 }
 
 export default function Modal({isOpen, onClose}: ModalProps) {
-  return(
-    <button>
-      abrir modal
-      <div className="w-screen h-screen bg-amber-100"></div>
+  if (!isOpen) return null;
 
+  return(
+    <button onClick={isOpen}>
+      abrir modal
+      <div className="w-screen h-screen bg-amber-100" onClick={onClose}></div>
+    
     </button>
   )
 }
