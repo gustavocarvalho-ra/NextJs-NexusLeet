@@ -9,12 +9,12 @@ Completed Tasks - ✔
 - Introduzir singIn automático após o cadastro de usuário ✔
 - Introduzir confirmação de senha no cadastro ✔
 - Introduzir botão para vizualizar a senha já digitada ✔
+- Introduzir botão para sair da sessão de usuário ✔
 
 Tasks - 
 
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
-- Introduzir botão para sair da sessão de usuário
 - Introduzir os produtos do BD
 - Criar as páginas de produtos
 - Introduzir carrinho de compra 
