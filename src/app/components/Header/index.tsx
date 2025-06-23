@@ -6,6 +6,7 @@ import { authOptions } from '@/app/lib/auth';
 
 import { FaRegUser } from "react-icons/fa";
 import ButtonSignOut from '../ui/ButtonSignOut.tsx';
+import Modal from '../ui/Modal';
 
 
 export default async function Header() {
@@ -28,6 +29,7 @@ export default async function Header() {
               <p >Ou Cadastre-se</p>
             </div>
           </Link>
+          <Modal />
         </div>
         <Nav />
       </div>
