@@ -8,8 +8,8 @@ export default function Modal({isOpen, onClose}: ModalProps) {
   if (!isOpen) return null;
 
   return(
-    <button onClick={isOpen}>
-      abrir modal
+    <button className="text-white" onClick={isOpen}>
+      Abrir modal
       <div className="w-screen h-screen bg-amber-100" onClick={onClose}></div>
     
     </button>

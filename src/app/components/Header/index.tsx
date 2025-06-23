@@ -51,6 +51,7 @@ export default async function Header() {
         </Link>
         <br />
         <ButtonSignOut />
+        <Modal />
       </div>
     </div>
   )
