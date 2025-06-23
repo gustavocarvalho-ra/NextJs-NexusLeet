@@ -5,7 +5,7 @@ import Nav from '../Navbar';
 import { authOptions } from '@/app/lib/auth';
 
 import { FaRegUser } from "react-icons/fa";
-// import { signOut } from 'next-auth/react';
+import ButtonSignOut from '../ui/ButtonSignOut.tsx';
 
 
 export default async function Header() {
@@ -47,9 +47,7 @@ export default async function Header() {
           <FaRegUser className='text-3xl' />
           Bem vindo, {session.user?.name}!
         </Link>
-        {/* <button onClick={() => signOut()}>
-          Sair
-        </button> */}
+        <ButtonSignOut />
       </div>
     </div>
   )

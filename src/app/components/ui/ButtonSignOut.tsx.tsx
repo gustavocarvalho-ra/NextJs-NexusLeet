@@ -2,7 +2,7 @@
 
 import { signOut } from "next-auth/react"
 
-export default function signOutButton() {
+export default function ButtonSignOut() {
   return(
     <button className="cursor-pointer" onClick={() => signOut()}>
       Sair
