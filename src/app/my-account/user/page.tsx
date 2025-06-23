@@ -2,6 +2,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/lib/auth';
 import Header from '@/app/components/Header';
 import { redirect } from 'next/navigation';
+import Modal from './../../components/ui/ModalHr';
 
 export default async function MyAccontUser() {
   const session = await getServerSession(authOptions);
@@ -15,6 +16,7 @@ export default async function MyAccontUser() {
       <Header />
       <h1>Minha Conta</h1>
       <p>Bem vindo, {session.user?.name || session.user?.email}!</p>
+      <Modal />
     </div>
   );
 }
