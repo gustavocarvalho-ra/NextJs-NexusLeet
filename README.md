@@ -13,6 +13,7 @@ Completed Tasks - ✔
 
 Tasks - 
 
+- Introduzir modal para o component Header
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
 - Introduzir os produtos do BD
