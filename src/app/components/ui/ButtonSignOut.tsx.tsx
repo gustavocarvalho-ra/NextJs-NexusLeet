@@ -4,7 +4,7 @@ import { signOut } from "next-auth/react"
 
 export default function Modal() {
   return(
-    <button onClick={() => signOut()}>
+    <button className="cursor-pointer" onClick={() => signOut()}>
       Sair
     </button>
   )
