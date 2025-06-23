@@ -15,7 +15,7 @@ export default async function Header() {
     return (
       <div className="w-screen min-h-26 bg-black flex flex-col justify-center">
         <div className="w-full flex justify-evenly items-center">
-          <Link href={"/"} className="text-amber-600 font-black text-4xl">
+          <Link href={"/"} className="text-(--text-amber) font-black text-4xl">
             Nexus Leet
           </Link>
 
@@ -36,17 +36,18 @@ export default async function Header() {
 
   return (
     <div className="w-full min-h-26 bg-black flex items-center justify-evenly">
-      <Link href={"/"} className="text-amber-600 font-black text-4xl">
+      <Link href={"/"} className="text-(--text-amber) font-black text-4xl">
         Nexus Leet
       </Link>
       
       <input placeholder='Buscar produto' className='bg-(--color-sec) w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
 
-      <div>
-        <Link className='text-white' href={"/my-account/user"}>
+      <div className='text-(--text-amber)'>
+        <Link href={"/my-account/user"}>
           <FaRegUser className='text-3xl' />
           Bem vindo, {session.user?.name}!
         </Link>
+        <br />
         <ButtonSignOut />
       </div>
     </div>
