@@ -29,7 +29,6 @@ export default async function Header() {
               <p >Ou Cadastre-se</p>
             </div>
           </Link>
-          <Modal />
         </div>
         <Nav />
       </div>
