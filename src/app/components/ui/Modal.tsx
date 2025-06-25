@@ -1,32 +1,35 @@
 "use client"
 
-import { useState } from "react";
+import { useState } from 'react';
 
-// interface ModalProps {
-//   isOpen?: boolean;
-//   onClose?: () => void;
-// }
-
-export default function Modal() {
+export default function ModalLinks() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleOpenModal = () => {
+
+  const toggleModal = () => {
     setIsOpen(!isOpen);
   };
 
-
-  return(
+  return (
     <div>
-      <button className="text-white cursor-pointer" onClick={handleOpenModal}>
-        Abrir modal
+      <button 
+        onClick={toggleModal}
+      >
+        Abrir Links
       </button>
-      
+
       {isOpen && (
-        <div className="w-screen h-screen absolute bg-amber-100" onClick={handleOpenModal}>
+        <div className="w-screen h-screen bg-amber-900 absolute" onClick={toggleModal}>
+          <h1>test</h1>
+          <div onClick={(e) => e.stopPropagation()}>
+            <button onClick={toggleModal}>
+              X
+            </button>
+            <h2>Links Úteis</h2>
 
+          </div>
         </div>
-
       )}
     </div>
-  )
+  );
 }
