@@ -19,12 +19,14 @@ export default function Modal() {
     <div>
       <button className="text-white cursor-pointer" onClick={handleOpenModal}>
         Abrir modal
-      
       </button>
-
-        <div className="w-screen h-screen absolute bg-amber-100" onClick={onClose}>
+      
+      {isOpen && (
+        <div className="w-screen h-screen absolute bg-amber-100" onClick={handleOpenModal}>
 
         </div>
+
+      )}
     </div>
   )
 }
