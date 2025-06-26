@@ -2,32 +2,32 @@
 
 import { useState } from 'react';
 
-export default function ModalLinks() {
-  const [isOpen, setIsOpen] = useState(false);
+interface HoverModal {
+  buttonText: string;
+  modalContent: React.ReactNode;
+}
 
-
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
+export default function ModalLinks({ modalContent }: HoverModal) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div>
+    <div className='relative inline-block'>
       <button 
-        onClick={toggleModal}
+        onMouseEnter={() => setIsModalOpen(true)}
+        onMouseLeave={() => setIsModalOpen(false)}
       >
-        Abrir Links
+        modal
       </button>
 
-      {isOpen && (
-        <div className="w-screen h-screen bg-amber-900 absolute" onClick={toggleModal}>
-          <h1>test</h1>
-          <div onClick={(e) => e.stopPropagation()}>
-            <button onClick={toggleModal}>
-              X
-            </button>
-            <h2>Links Úteis</h2>
+      {isModalOpen && (
+        <div 
+          className=" bg-amber-900 z-10 absolute" 
+          onMouseEnter={() => setIsModalOpen(true)} 
+          onMouseLeave={() => setIsModalOpen(false)}
+        >
+          {modalContent}
+          <h1>test modal</h1>
 
-          </div>
         </div>
       )}
     </div>
