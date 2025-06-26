@@ -10,10 +10,10 @@ Completed Tasks - ✔
 - Introduzir confirmação de senha no cadastro ✔
 - Introduzir botão para vizualizar a senha já digitada ✔
 - Introduzir botão para sair da sessão de usuário ✔
+- Introduzir modal para o component Header ✔
 
 Tasks - 
 
-- Introduzir modal para o component Header
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
 - Introduzir os produtos do BD
