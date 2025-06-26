@@ -50,7 +50,12 @@ export default async function Header() {
         </Link>
         <br />
         <ButtonSignOut />
-        <Modal />
+        <Modal 
+          modalContent={
+            <div className='h-5 w-2'>
+              <h2>test de modal</h2>
+            </div>
+          }/>
       </div>
     </div>
   )

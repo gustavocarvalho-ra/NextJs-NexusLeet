@@ -3,7 +3,6 @@
 import { useState } from 'react';
 
 interface HoverModal {
-  buttonText: string;
   modalContent: React.ReactNode;
 }
 
@@ -21,13 +20,11 @@ export default function ModalLinks({ modalContent }: HoverModal) {
 
       {isModalOpen && (
         <div 
-          className=" bg-amber-900 z-10 absolute" 
+          className="w-50 h-60 bg-amber-900 z-10 absolute" 
           onMouseEnter={() => setIsModalOpen(true)} 
           onMouseLeave={() => setIsModalOpen(false)}
         >
           {modalContent}
-          <h1>test modal</h1>
-
         </div>
       )}
     </div>
