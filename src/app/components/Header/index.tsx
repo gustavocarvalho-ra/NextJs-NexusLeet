@@ -52,7 +52,6 @@ export default async function Header() {
               <Link href={"/my-account/user"}>Meu perfil</Link>
 
               <ButtonSignOut />
-              <h2>test de modal</h2>
             </div>
           }/>
       </div>
