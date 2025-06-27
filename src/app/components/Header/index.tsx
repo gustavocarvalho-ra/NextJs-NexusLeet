@@ -45,7 +45,12 @@ export default async function Header() {
 
       <div className='flex gap-1.5 text-(--text-amber)'>
         <Modal 
-          TextStr={<p>{session.user?.name}</p>}
+          TextStr={
+            <div className='flex items-center gap-1'>
+              <FaRegUser/>
+              <p>{session.user?.name}</p>
+            </div>
+          }
 
 
           modalContent={
