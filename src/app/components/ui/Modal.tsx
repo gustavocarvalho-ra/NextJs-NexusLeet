@@ -3,10 +3,11 @@
 import { useState } from 'react';
 
 interface HoverModal {
+  TextStr: React.ReactNode;
   modalContent: React.ReactNode;
 }
 
-export default function ModalLinks({ modalContent }: HoverModal) {
+export default function ModalLinks({ TextStr, modalContent }: HoverModal) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -15,6 +16,7 @@ export default function ModalLinks({ modalContent }: HoverModal) {
         onMouseEnter={() => setIsModalOpen(true)}
         onMouseLeave={() => setIsModalOpen(false)}
       >
+        {TextStr}
       </button>
 
         <div 

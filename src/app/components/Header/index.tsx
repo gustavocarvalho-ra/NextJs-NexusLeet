@@ -45,12 +45,13 @@ export default async function Header() {
 
       <div className='flex gap-1.5 text-(--text-amber)'>
         <Modal 
+          TextStr={<p>{session.user?.name}</p>}
 
 
           modalContent={
             <>
               <FaRegUser className='text-2xl' />
-              <p>`${session.user?.name}`</p>
+              <p>{session.user?.name}</p>
               <div className='h-5 w-2'>
                 <Link href={"/my-account/user"}>Meu perfil</Link>
 
