@@ -43,16 +43,15 @@ export default async function Header() {
       
       <input placeholder='Buscar produto' className='bg-(--color-sec) w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
 
-      <div className='text-(--text-amber)'>
-        <Link href={"/my-account/user"}>
-          <FaRegUser className='text-3xl' />
-          Bem vindo, {session.user?.name}!
-        </Link>
-        <br />
-        <ButtonSignOut />
+      <div className='flex text-(--text-amber)'>
+          <FaRegUser className='text-2xl' />
+          {session.user?.name}!
         <Modal 
           modalContent={
             <div className='h-5 w-2'>
+              <Link href={"/my-account/user"}>Meu perfil</Link>
+
+              <ButtonSignOut />
               <h2>test de modal</h2>
             </div>
           }/>
