@@ -11,7 +11,7 @@ export default function ModalLinks({ TextStr, modalContent }: HoverModal) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className='relative inline-block'>
+    <div className='relative flex justify-center'>
       <button 
         onMouseEnter={() => setIsModalOpen(true)}
         onMouseLeave={() => setIsModalOpen(false)}
