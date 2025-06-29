@@ -14,7 +14,7 @@ export default async function Header() {
 
   if (!session) {
     return (
-      <div className="w-screen min-h-26 bg-(--background) flex flex-col justify-center">
+      <div className="w-screen min-h-26 bg-(--back) flex flex-col justify-center">
         <div className="w-full flex justify-evenly items-center">
           <Link href={"/"} className="text-(--text-amber) font-black text-4xl">
             Nexus Leet
@@ -36,7 +36,7 @@ export default async function Header() {
   }
 
   return (
-    <div className="w-full min-h-26 bg-(--background) flex items-center justify-evenly">
+    <div className="w-full min-h-26 bg-(--back) flex items-center justify-evenly">
       <Link href={"/"} className="text-(--text-amber) font-black text-4xl">
         Nexus Leet
       </Link>
