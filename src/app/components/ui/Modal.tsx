@@ -12,7 +12,7 @@ export default function ModalLinks({ TextStr, modalContent }: HoverModal) {
 
   return (
     <div className='relative flex justify-center'>
-      <button 
+      <button className='hover:opacity-0'
         onMouseEnter={() => setIsModalOpen(true)}
         onMouseLeave={() => setIsModalOpen(false)}
       >
