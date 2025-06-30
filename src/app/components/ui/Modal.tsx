@@ -20,7 +20,7 @@ export default function ModalLinks({ TextStr, modalContent }: HoverModal) {
       </button>
 
         <div 
-          className={`w-50 h-60 bg-amber-900 z-10 absolute rounded shadow-lg transition-opacity duration-300 ease-in-out
+          className={`w-50 h-60 bg-(--mod) z-10 absolute rounded shadow-lg transition-opacity duration-300 ease-in-out
             ${isModalOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
           onMouseEnter={() => setIsModalOpen(true)} 
           onMouseLeave={() => setIsModalOpen(false)}
