@@ -54,15 +54,18 @@ export default async function Header() {
 
 
           modalContent={
-            <>
-              <FaRegUser className='text-2xl' />
-              <p>{session.user?.name}</p>
-              <div className='h-5 w-2'>
+            <div className='font-medium flex flex-col w-full h-full'>
+              <div className='flex w-full h-full'>
+                <FaRegUser className='text-2xl' />
+                <p>{session.user?.name}</p>
+
+              </div>
+              <div className='w-full h-full'>
                 <Link href={"/my-account/user"}>Meu perfil</Link>
 
                 <ButtonSignOut />
               </div>
-            </>
+            </div>
           }/>
       </div>
     </div>
