@@ -43,10 +43,10 @@ export default async function Header() {
       
       <input placeholder='Buscar produto' className='bg-(--color-sec) w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
 
-      <div className='flex gap-1.5 text-(--text-amber)'>
+      <div className='flex gap-1.5 '>
         <Modal 
           TextStr={
-            <div className='flex items-center gap-1 text-xl'>
+            <div className='flex items-center gap-1 text-xl text-(--text-amber)'>
               <FaRegUser/>
               <p>{session.user?.name}</p>
             </div>
@@ -54,7 +54,7 @@ export default async function Header() {
 
 
           modalContent={
-            <div className='font-medium flex flex-col w-full h-full'>
+            <div className='font-medium text-(--inv-sec) flex flex-col w-full h-full'>
               <div className='flex w-full h-full gap-1.5'>
                 <FaRegUser className='text-2xl' />
                 <p>{session.user?.name}</p>
