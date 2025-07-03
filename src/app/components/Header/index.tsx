@@ -60,7 +60,7 @@ export default async function Header() {
                 <p>{session.user?.name}</p>
 
               </div>
-              <div className='w-full h-full'>
+              <div className='w-full h-full flex flex-col'>
                 <Link href={"/my-account/user"}>Meu perfil</Link>
 
                 <ButtonSignOut />
