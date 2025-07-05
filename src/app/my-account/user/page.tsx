@@ -2,7 +2,6 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/lib/auth';
 import Header from '@/app/components/Header';
 import { redirect } from 'next/navigation';
-import Modal from '../../components/ui/ButtonSignOut.tsx';
 
 export default async function MyAccontUser() {
   const session = await getServerSession(authOptions);
@@ -17,12 +16,13 @@ export default async function MyAccontUser() {
       <div className='w-full h-full flex justify-center'>
 
         <div className="w-1/2 bg-amber-400">
-
+          <div>
+            
+          </div>
           <h1>Minha Conta</h1>
           <p>Bem vindo, {session.user?.name || session.user?.email}!</p>
         </div>
       </div>
-      <Modal />
     </div>
   );
 }
