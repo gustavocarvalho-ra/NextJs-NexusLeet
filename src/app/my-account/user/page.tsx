@@ -17,11 +17,16 @@ export default async function MyAccontUser() {
       <div className='w-full h-full flex justify-center'>
 
         <div className="w-1/2 bg-amber-400">
-          <div className='w-20 h-20 relative rounded-full flex justify-center overflow-clip items-center bg-amber-100'>
-            <Image className='absolute' src={"/iduser.jpeg"} width={150} height={150} alt='User Image' />
+          <div className='p-9 flex gap-4 items-center'>
+            <div className='w-20 h-20 relative rounded-full flex justify-center overflow-clip items-center bg-amber-100'>
+              <Image className='absolute' src={"/iduser.jpeg"} layout="fill" objectFit="cover" alt='Imagem de usuário' />
+            </div>
+            <div className='flex flex-col'>
+              <p className='font-semibold'>{session.user?.name}</p>
+              <p className='font-normal'>{session.user?.email}</p>
+            </div>
+
           </div>
-          <h1>Minha Conta</h1>
-          <p>Bem vindo, {session.user?.name || session.user?.email}!</p>
         </div>
       </div>
     </div>
