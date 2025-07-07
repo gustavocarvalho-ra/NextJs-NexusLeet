@@ -36,7 +36,7 @@ export default async function Header() {
   }
 
   return (
-    <div className="w-full min-h-26 bg-(--back) flex items-center justify-evenly">
+    <div className="w-full min-h-26 shadow-lg/30 bg-(--back) flex items-center justify-evenly">
       <Link href={"/"} className="text-(--text-amber) font-black text-4xl">
         Nexus Leet
       </Link>
