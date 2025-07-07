@@ -25,6 +25,9 @@ export default async function MyAccontUser() {
               <p className='font-semibold'>{session.user?.name}</p>
               <p className='font-normal'>{session.user?.email}</p>
             </div>
+            <div>
+              
+            </div>
 
           </div>
         </div>
