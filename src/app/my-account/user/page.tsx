@@ -18,8 +18,8 @@ export default async function MyAccontUser() {
       <div className='w-full h-full flex justify-center'>
 
         <div className="w-1/2 bg-amber-400">
-          <div className='p-9 flex flex-col gap-4 items-center'>
-            <div className='flex'>
+          <div className='p-9 flex flex-col gap-4'>
+            <div className='flex items-center gap-4'>
               <div className='w-20 h-20 relative rounded-full flex justify-center overflow-clip items-center bg-amber-100'>
                 <Image className='absolute' src={"/iduser.jpeg"} layout="fill" objectFit="cover" alt='Imagem de usuário' />
               </div>
