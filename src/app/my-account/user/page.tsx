@@ -3,6 +3,7 @@ import { authOptions } from '@/app/lib/auth';
 import Header from '@/app/components/Header';
 import { redirect } from 'next/navigation';
 import Image  from 'next/image';
+import CardUser from '@/app/components/ui/CardUser';
 
 export default async function MyAccontUser() {
   const session = await getServerSession(authOptions);
@@ -26,6 +27,7 @@ export default async function MyAccontUser() {
               <p className='font-normal'>{session.user?.email}</p>
             </div>
             <div>
+              <CardUser />
               
             </div>
 
