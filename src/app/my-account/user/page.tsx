@@ -4,6 +4,7 @@ import Header from '@/app/components/Header';
 import { redirect } from 'next/navigation';
 import Image  from 'next/image';
 import CardUser from '@/app/components/ui/CardUser';
+import { FaRegUser } from 'react-icons/fa';
 
 export default async function MyAccontUser() {
   const session = await getServerSession(authOptions);
@@ -29,7 +30,11 @@ export default async function MyAccontUser() {
               </div>
             </div>
             <div>
-              <CardUser />
+              <CardUser
+                icon={<FaRegUser />}
+                TextStr="Informações pessoais"
+                AboutStr="informações de seu documento de identidade"
+              />
               
             </div>
 
