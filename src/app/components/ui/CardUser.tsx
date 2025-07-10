@@ -10,7 +10,7 @@ export default function CardUser({icon, TextStr, AboutStr}: CardInt) {
 
 
   return (
-    <div className="w-3/12 h-16 bg-amber-200 flex justify-center">
+    <div className="w-1/3 h-36 bg-amber-200 flex flex-col justify-center rounded-lg">
       <h1>{icon}</h1>
       <h2>{TextStr}</h2>
       <h3>{AboutStr}</h3>
