@@ -29,7 +29,7 @@ export default async function MyAccontUser() {
                 <p className='font-normal'>{session.user?.email}</p>
               </div>
             </div>
-            <div>
+            <div className='flex gap-6'>
               <CardUser
                 icon={<FaUnlockAlt />}
                 TextStr="Segurança"
