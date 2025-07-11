@@ -18,7 +18,7 @@ export default async function MyAccontUser() {
       <Header />
       <div className='w-full h-full flex justify-center'>
 
-        <div className="w-1/2 bg-amber-400">
+        <div className="w-2/3">
           <div className='p-9 flex flex-col gap-4'>
             <div className='flex items-center gap-4'>
               <div className='w-20 h-20 relative rounded-full flex justify-center overflow-clip items-center bg-amber-100'>
