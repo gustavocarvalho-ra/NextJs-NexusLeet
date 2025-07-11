@@ -11,9 +11,9 @@ export default function CardUser({icon, TextStr, AboutStr}: CardInt) {
 
   return (
     <div className="w-1/3 h-36 bg-(--mod) flex flex-col justify-center rounded-lg p-3.5">
-      <h1 className="font-black h-1/5 text">{icon}</h1>
-      <h2 className="font-semibold h-1/5">{TextStr}</h2>
-      <h3 className="font-extralight h-3/5">{AboutStr}</h3>
+      <h1 className="font-black h-1/4 text-xl">{icon}</h1>
+      <h2 className="font-semibold h-1/4">{TextStr}</h2>
+      <h3 className="font-extralight h-1/2">{AboutStr}</h3>
     </div>
   )
 }
