@@ -4,17 +4,13 @@
 :root {
   --back: #1b1c1e;
   --bkz: #303030;
-  --bg: #ffe6d163;
   --background: #fae6d6;
   --bg-white: #ededed;
-  --bg-test: #f59f5563;
   --bg-sec: #e9e4e9;
-  --foreground: #171717;
   --text-amber: #e17100;
   --color-sec: #e8e8e8;
-  --inv-sec: #171717;
   --hover-pr: rgba(124, 213, 236, 0.836);
-  --mod: rgb(204, 204, 204);
+  --mod: #d8d4cd80;
 
 }
 
