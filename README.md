@@ -11,6 +11,7 @@ Completed Tasks - ✔
 - Introduzir botão para vizualizar a senha já digitada ✔
 - Introduzir botão para sair da sessão de usuário ✔
 - Introduzir modal para o component Header ✔
+- Introduzir botões para configurações de usuário (sem lógica) ✔
 
 Tasks - 
 
