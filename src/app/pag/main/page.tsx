@@ -8,7 +8,13 @@ export default function Main() {
     <div className="w-screen h-screen flex flex-col">
       <Header />
       <h1>Tela inicial</h1>
-      <div className='w-11/12 h-screen flex flex-wrap gap-4'>
+      <div className='w-11/12 h-screen flex flex-wrap gap-4 justify-center'>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
         <Card />
         <Card />
         <Card />
