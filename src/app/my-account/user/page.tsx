@@ -5,6 +5,8 @@ import { redirect } from 'next/navigation';
 import Image  from 'next/image';
 import CardUser from '@/app/components/ui/CardUser';
 import { FaRegUser, FaUnlockAlt  } from 'react-icons/fa';
+import { TbTruckDelivery } from "react-icons/tb";
+
 
 export default async function MyAccontUser() {
   const session = await getServerSession(authOptions);
@@ -41,9 +43,9 @@ export default async function MyAccontUser() {
                 AboutStr="Dados pessoais."
               />
               <CardUser
-                icon={<FaUnlockAlt />}
-                TextStr="Segurança"
-                AboutStr="Configurações de segurança da sua conta."
+                icon={<TbTruckDelivery />}
+                TextStr="Entrega"
+                AboutStr="Dados do endereço de entrega"
               />
               <CardUser
                 icon={<FaRegUser />}
