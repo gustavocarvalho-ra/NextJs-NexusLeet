@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation';
 import Image  from 'next/image';
 import CardUser from '@/app/components/ui/CardUser';
 import { FaRegUser, FaUnlockAlt, FaRegCreditCard } from 'react-icons/fa';
-import { TbTruckDelivery } from "react-icons/tb";
+import { MdOutlinePrivacyTip, MdLocationOn  } from "react-icons/md";
 
 
 export default async function MyAccontUser() {
@@ -43,9 +43,9 @@ export default async function MyAccontUser() {
                 AboutStr="Dados pessoais."
               />
               <CardUser
-                icon={<TbTruckDelivery />}
+                icon={<MdLocationOn />}
                 TextStr="Entrega"
-                AboutStr="Dados do endereço de entrega."
+                AboutStr="Dados de endereço de entrega."
               />
               <CardUser
                 icon={<FaRegCreditCard />}
@@ -53,26 +53,10 @@ export default async function MyAccontUser() {
                 AboutStr="Cartões para meio de pagamento."
               />
               <CardUser
-                icon={<FaUnlockAlt />}
-                TextStr="Segurança"
-                AboutStr="Configurações de segurança da sua conta."
+                icon={<MdOutlinePrivacyTip />}
+                TextStr="Privacidade"
+                AboutStr="Preferência e controle de dados."
               />
-              <CardUser
-                icon={<FaRegUser />}
-                TextStr="Dados da sua conta"
-                AboutStr="Dados pessoais."
-              />
-              <CardUser
-                icon={<FaUnlockAlt />}
-                TextStr="Segurança"
-                AboutStr="Configurações de segurança da sua conta."
-              />
-              <CardUser
-                icon={<FaRegUser />}
-                TextStr="Dados da sua conta"
-                AboutStr="Dados pessoais."
-              />
-              
             </div>
 
           </div>
