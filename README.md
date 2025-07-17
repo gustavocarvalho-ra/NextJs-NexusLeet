@@ -1,3 +1,5 @@
+# -Em espera-
+
 # Projeto Full-Stack de uma loja de roupas fictícia chamada "Nexus Leet"
 
 
