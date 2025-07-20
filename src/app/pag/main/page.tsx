@@ -11,18 +11,18 @@ export default function Main() {
       <div className='w-full h-full flex justify-center'>
 
         <div className='w-11/12 h-screen grid grid-cols-6 gap-4 '>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
         </div>
       </div>
     </div>
