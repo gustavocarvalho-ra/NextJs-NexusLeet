@@ -6,7 +6,7 @@ interface CardInt {
   AboutStr: React.ReactNode;
 }
 
-export default function CardUser({icon, TextStr, AboutStr}: CardInt) {
+export default function CardUserConfg({icon, TextStr, AboutStr}: CardInt) {
 
 
   return (

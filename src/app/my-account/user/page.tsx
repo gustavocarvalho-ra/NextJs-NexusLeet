@@ -3,7 +3,7 @@ import { authOptions } from '@/app/lib/auth';
 import Header from '@/app/components/Header';
 import { redirect } from 'next/navigation';
 import Image  from 'next/image';
-import CardUser from '@/app/components/ui/CardUserConfg';
+import CardUserConfg from '@/app/components/ui/CardUserConfg';
 import { FaRegUser, FaUnlockAlt, FaRegCreditCard } from 'react-icons/fa';
 import { MdOutlinePrivacyTip, MdLocationOn  } from "react-icons/md";
 
@@ -32,27 +32,27 @@ export default async function MyAccontUser() {
               </div>
             </div>
             <div className='flex gap-6 flex-wrap'>
-              <CardUser
+              <CardUserConfg
                 icon={<FaUnlockAlt />}
                 TextStr="Segurança"
                 AboutStr="Configurações de segurança da sua conta."
               />
-              <CardUser
+              <CardUserConfg
                 icon={<FaRegUser />}
                 TextStr="Dados da sua conta"
                 AboutStr="Dados pessoais."
               />
-              <CardUser
+              <CardUserConfg
                 icon={<MdLocationOn />}
                 TextStr="Entrega"
                 AboutStr="Dados de endereço de entrega."
               />
-              <CardUser
+              <CardUserConfg
                 icon={<FaRegCreditCard />}
                 TextStr="Cartões"
                 AboutStr="Cartões para meio de pagamento."
               />
-              <CardUser
+              <CardUserConfg
                 icon={<MdOutlinePrivacyTip />}
                 TextStr="Privacidade"
                 AboutStr="Preferência e controle de dados."
