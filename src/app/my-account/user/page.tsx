@@ -3,7 +3,7 @@ import { authOptions } from '@/app/lib/auth';
 import Header from '@/app/components/Header';
 import { redirect } from 'next/navigation';
 import Image  from 'next/image';
-import CardUser from '@/app/components/ui/CardUser';
+import CardUser from '@/app/components/ui/CardUserConfg';
 import { FaRegUser, FaUnlockAlt, FaRegCreditCard } from 'react-icons/fa';
 import { MdOutlinePrivacyTip, MdLocationOn  } from "react-icons/md";
 
