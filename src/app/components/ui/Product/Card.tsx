@@ -7,7 +7,7 @@ interface CardProps {
 
 export default function Card({Name, Price, Type}: CardProps) {
   return (
-    <div className="bg-(--mod) w-full h-full p-3 flex items-center flex-col gap-3 rounded-lg">
+    <div className="bg-(--mod) min-w-65 h-full p-3 flex items-center flex-col gap-3 rounded-lg">
       <div className="bg-amber-100 w-[90%] h-3/4 rounded-lg"></div>
       <div className="bg-amber-100 w-full h-1/4">
         <h1>{Name}</h1>

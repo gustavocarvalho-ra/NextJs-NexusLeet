@@ -23,6 +23,7 @@ export default function Main() {
           <Card Name="test" Price="99,99" Type="test"/>
           <Card Name="test" Price="99,99" Type="test"/>
           <Card Name="test" Price="99,99" Type="test"/>
+          <Card Name="test" Price="99,99" Type="test"/>
         </div>
       </div>
     </div>
