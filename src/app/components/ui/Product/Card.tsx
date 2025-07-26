@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface CardProps {
-  id: number;
+  id: number
   Name: React.ReactNode;
   Price: React.ReactNode;
   Type: React.ReactNode;
