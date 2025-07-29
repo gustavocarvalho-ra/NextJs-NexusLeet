@@ -9,7 +9,9 @@ export default function Main() {
     <div className="w-screen h-screen flex flex-col">
       <Header />
       <div className='w-full h-full flex'>
-        <MenuCategoria className='w-1/4'/>
+        <div className='w-1/4'>
+          <MenuCategoria className=''/>
+        </div>
         <div className='w-3/4 min-h-screen grid grid-cols-5 gap-5.5 flex-wrap '>
 
           <Card id={1} Name="test" Price="99,99" Type="test"/>
