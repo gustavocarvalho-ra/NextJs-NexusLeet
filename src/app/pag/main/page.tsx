@@ -11,7 +11,7 @@ export default function Main() {
       <div className='w-full h-full flex'>
 
         <div className='w-1/4 flex justify-center'>
-          <MenuCategoria className=''/>
+          <MenuCategoria className='rounded-lg'/>
         </div>
 
         <div className='w-3/4 min-h-screen'>
