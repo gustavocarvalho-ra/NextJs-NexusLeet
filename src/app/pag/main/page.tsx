@@ -10,7 +10,7 @@ export default function Main() {
       <Header />
       <div className='w-full h-full flex'>
 
-        <div className='w-1/4'>
+        <div className='w-1/4 flex justify-center'>
           <MenuCategoria className=''/>
         </div>
 
