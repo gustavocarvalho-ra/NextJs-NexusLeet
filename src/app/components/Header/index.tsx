@@ -60,10 +60,10 @@ export default async function Header() {
                 <p>{session.user?.name}</p>
 
               </div>
-              <div className='w-full h-full flex flex-col gap-1.5'>
-                <Link href={"/my-account/user"}>Meu perfil</Link>
+              <div className='w-full h-full flex flex-col gap-1.5 '>
+                <Link href={"/my-account/user"} className='hover:text-(--text-amber)'>Meu perfil</Link>
 
-                <ButtonSignOut />
+                <ButtonSignOut className='hover:text-(--text-amber)' />
               </div>
             </div>
           }/>
