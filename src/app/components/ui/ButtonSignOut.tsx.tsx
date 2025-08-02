@@ -2,9 +2,13 @@
 
 import { signOut } from "next-auth/react"
 
-export default function ButtonSignOut() {
+interface ButtonSignOutProps {
+  className?: string;
+}
+
+export default function ButtonSignOut({ className }:ButtonSignOutProps) {
   return(
-    <button className="flex cursor-pointer" onClick={() => signOut()}>
+    <button className={className} onClick={() => signOut()}>
       Sair
     </button>
   )
