@@ -8,7 +8,7 @@ export default function Main() {
   return (
     <div className="w-screen h-screen flex flex-col">
       <Header />
-      <div className='w-full h-full flex'>
+      <div className='w-full h-full flex pt-20'>
 
         <div className='w-1/4 flex justify-center'>
           <MenuCategoria className='rounded-lg'/>
