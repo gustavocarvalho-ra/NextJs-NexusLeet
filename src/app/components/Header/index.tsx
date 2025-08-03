@@ -41,7 +41,10 @@ export default async function Header() {
         Nexus Leet
       </Link>
       
-      <input placeholder='Buscar produto' className='bg-(--color-sec) w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
+      <div>
+        <input placeholder='Buscar produto' className='bg-(--color-sec) w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
+        <Nav />
+      </div>
 
       <div className='flex gap-1.5 '>
         <Modal 
@@ -67,6 +70,7 @@ export default async function Header() {
               </div>
             </div>
           }/>
+        
       </div>
     </div>
   )
