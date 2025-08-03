@@ -41,8 +41,8 @@ export default async function Header() {
         Nexus Leet
       </Link>
       
-      <div>
-        <input placeholder='Buscar produto' className='bg-(--color-sec) w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
+      <div className='w-1/3'>
+        <input placeholder='Buscar produto' className='bg-(--color-sec) w-full h-8 pl-2.5 text-black font-medium rounded-sm'/>
         <Nav />
       </div>
 
