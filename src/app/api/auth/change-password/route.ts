@@ -1,8 +1,8 @@
-import { hash } from "crypto";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/lib/auth";
 import { prisma } from "@/app/lib/prisma";
 import { NextResponse } from "next/server";
+import { hash, compare } from "bcrypt";
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
@@ -21,7 +21,20 @@ export async function POST(req: Request) {
   });
 
   if (!user || !user.password) {
-    return NextResponse.json({ error: "Usuário não encontrado" }, {status: 400})
+    return NextResponse.json({ error: "Usuário não encontrado" }, {status: 400});
   }
 
+  const isValid = await compare(currentPassword, user.password);
+  if (!isValid) {
+    return NextResponse.json({ error: "Senha atual incorrenta" }, { status: 400 });
+  }
+
+  const hashedNewPassword = await hash(newPassword, 10);
+
+  await prisma.user.update({
+    where: { email: session.user.email },
+    data: { password: hashedNewPassword },
+  });
+
+  return NextResponse.json({ message: "Senha alterada com sucesso" });
 }
