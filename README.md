@@ -17,6 +17,7 @@ Completed Tasks - ✔
 
 Tasks - 
 
+- Introduzir funcionalidade de edição de senha de usuário
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
 - Introduzir os produtos do BD
