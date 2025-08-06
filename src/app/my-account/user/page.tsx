@@ -39,7 +39,7 @@ export default async function MyAccontUser() {
                 AboutStr="Configurações de segurança da sua conta."
               />
               <CardUserConfg
-                href='/'
+                href='/my-account/user/confg'
                 icon={<FaRegUser />}
                 TextStr="Dados da sua conta"
                 AboutStr="Dados pessoais."
