@@ -14,10 +14,10 @@ Completed Tasks - ✔
 - Introduzir botão para sair da sessão de usuário ✔
 - Introduzir modal para o component Header ✔
 - Introduzir botões para configurações de usuário (sem lógica) ✔
+- Introduzir funcionalidade de edição de senha de usuário ✔
 
 Tasks - 
 
-- Introduzir funcionalidade de edição de senha de usuário
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
 - Introduzir os produtos do BD
@@ -37,5 +37,6 @@ v2 -
 - Typescript
 - TailwindCSS
 - Prisma
+- JWT
 - SQlite
 - Eslint
