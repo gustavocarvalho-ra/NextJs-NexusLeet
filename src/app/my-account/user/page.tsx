@@ -33,26 +33,31 @@ export default async function MyAccontUser() {
             </div>
             <div className='flex gap-6 flex-wrap'>
               <CardUserConfg
+                href='/'
                 icon={<FaUnlockAlt />}
                 TextStr="Segurança"
                 AboutStr="Configurações de segurança da sua conta."
               />
               <CardUserConfg
+                href='/'
                 icon={<FaRegUser />}
                 TextStr="Dados da sua conta"
                 AboutStr="Dados pessoais."
               />
               <CardUserConfg
+                href='/'
                 icon={<MdLocationOn />}
                 TextStr="Entrega"
                 AboutStr="Dados de endereço de entrega."
               />
               <CardUserConfg
+                href='/'
                 icon={<FaRegCreditCard />}
                 TextStr="Cartões"
                 AboutStr="Cartões para meio de pagamento."
               />
               <CardUserConfg
+                href='/'
                 icon={<MdOutlinePrivacyTip />}
                 TextStr="Privacidade"
                 AboutStr="Preferência e controle de dados."
