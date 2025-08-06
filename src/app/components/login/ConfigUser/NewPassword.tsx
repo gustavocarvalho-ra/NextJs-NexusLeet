@@ -9,7 +9,7 @@ export default function ChangePasswordForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const res = await fetch("/api/auth/user/change-password", {
+    const res = await fetch("/api/auth/userConfig/change-password", {
       method: "POST",
       body: JSON.stringify({ currentPassword, newPassword }),
       headers: { "Content-Type": "application/json" },
