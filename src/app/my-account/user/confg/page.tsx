@@ -8,7 +8,7 @@ export default async function ConfigUserAccount() {
   const session = await getServerSession(authOptions)
 
   if (!session) {
-    redirect("/my-account/user");
+    redirect("/my-account");
   }
 
   return (
