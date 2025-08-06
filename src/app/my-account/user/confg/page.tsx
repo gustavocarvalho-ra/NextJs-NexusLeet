@@ -18,7 +18,7 @@ export default async function ConfigUserAccount() {
       <Header />
       <div className="w-full h-full flex flex-col items-center justify-center gap-16">
         <div className="w-1/3 h-1/6 bg-amber-300">
-          <h1>email</h1>
+          <h1>E-mail</h1>
           <h3>{session.user?.email}</h3>
         </div>
 
@@ -29,14 +29,13 @@ export default async function ConfigUserAccount() {
           <Link href={''}></Link>
 
         </div>
-        <div className="w-1/3 h-1/6 bg-amber-300">
+        <div className="w-1/3 h-1/6 bg-amber-300 relative">
           <h1>Alter senha</h1>
           <Link href={'/'} className="bg-(--text-amber) w-[10%] h-[5%]">
-            <button>test</button>
+            <Button className="w-1/12 h-1/12 bottom-10 border-none">
+              Alterar
+            </Button>
           </Link>
-          <Button>
-            Alterar
-          </Button>
         </div>
       </div>
     </div>
