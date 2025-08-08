@@ -49,7 +49,7 @@ export default async function Header() {
       <div className='flex gap-1.5 '>
         <Modal 
           TextStr={
-            <div className='flex items-center gap-1 text-base text-(--text-amber)'>
+            <div className='flex items-center gap-1 text-lg text-(--text-amber)'>
               <FaRegUser/>
               <p>{session.user?.name?.trim().split(/\s+/)[0]}</p>
             </div>
