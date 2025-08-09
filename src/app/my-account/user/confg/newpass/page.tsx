@@ -13,12 +13,12 @@ export default async function NewPass() {
   }
 
   return (
-    <div className="w-scren h-scren">
+    <div className="w-screen h-screen">
       <Header />
 
-    <div>
-      <ChangePasswordForm />
-    </div>
+      <div className="w-full h-full flex justify-center items-center">
+        <ChangePasswordForm />
+      </div>
 
     </div>
 
