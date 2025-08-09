@@ -34,16 +34,25 @@ export default function ChangePasswordForm() {
         value={form.currentPassword}
         onChange={(e) => setForm({...form, currentPassword: e.target.value})}
       />
+
       <input
         type="password"
         placeholder="Nova senha"
         value={form.newPassword}
         onChange={(e) => setForm({...form, newPassword: e.target.value})}
       />
+
+      <input
+        type="password"
+        placeholder="Nova senha"
+        value={form.confirmNewPassword}
+        onChange={(e) => setForm({...form, confirmNewPassword: e.target.value})}
+      />
       <button type="submit" className="bg-blue-600 text-amber-400 rounded-lg">
         Alterar senha
       </button>
       {message && <p>{message}</p>}
+      {error && <p>{error}</p>}
     </form>
   );
 }
