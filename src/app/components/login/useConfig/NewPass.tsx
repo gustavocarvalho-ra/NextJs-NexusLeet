@@ -4,8 +4,6 @@ import { useState } from "react";
 import { Input } from "../../ui/Input";
 
 export default function ChangePasswordForm() {
-  // const [currentPassword, setCurrentPassword] = useState("");
-  // const [newPassword, setNewPassword] = useState("");
   const [message, setMessage] = useState("");
   const [form, setForm] = useState({ currentPassword: "", newPassword: "", confirmNewPassword: ""});
   const [error, setError] = useState("");
