@@ -26,8 +26,6 @@ export default async function ConfigUserAccount() {
             </Button>
           </Link>
         </div>
-
-
         
         <div className="w-1/3 h-1/6 bg-(--mod) gap-1 flex flex-col p-4 rounded-sm relative">
           <h1 className="font-medium">Nome de usuário</h1>
@@ -41,7 +39,7 @@ export default async function ConfigUserAccount() {
         </div>
         <div className="w-1/3 h-1/6 bg-(--mod) gap-1 flex flex-col p-4 rounded-sm relative">
           <h1 className="">Alter senha</h1>
-          <Link href={'/'} className="bg-(--text-amber) w-[10%] h-1/4 rounded-lg relative">
+          <Link href={'/my-account/user/confg/newpass'} className="bg-(--text-amber) w-[10%] h-1/4 rounded-lg relative">
             <Button className="w-full h-full border-none font-light">
               Alterar
             </Button>
