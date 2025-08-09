@@ -11,16 +11,19 @@ export default function ChangePasswordForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setError("");
+
+    if (form.newPassword !== form.confirmNewPassword) {
+      setError("As senhas não coincidem!")
+      return;
+    }
+
     const res = await fetch("/api/auth/userConfig/change-password", {
       method: "POST",
       body: JSON.stringify(form),
       headers: { "Content-Type": "application/json" },
     });
 
-    if (form.newPassword !== form.confirmNewPassword) {
-      setError("As senhas não coincidem!")
-      return;
-    }
 
     const data = await res.json();
     setMessage(data.message || data.error);
