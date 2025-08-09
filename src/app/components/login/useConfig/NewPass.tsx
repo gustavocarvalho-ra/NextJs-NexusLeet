@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import { Input } from "../../ui/Input";
 
 export default function ChangePasswordForm() {
   // const [currentPassword, setCurrentPassword] = useState("");
@@ -31,21 +32,21 @@ export default function ChangePasswordForm() {
 
   return (
     <form onSubmit={handleSubmit} className="absolute">
-      <input
+      <Input
         type="password" 
         placeholder="Senha atual"
         value={form.currentPassword}
         onChange={(e) => setForm({...form, currentPassword: e.target.value})}
       />
 
-      <input
+      <Input
         type="password"
         placeholder="Nova senha"
         value={form.newPassword}
         onChange={(e) => setForm({...form, newPassword: e.target.value})}
       />
 
-      <input
+      <Input
         type="password"
         placeholder="Nova senha"
         value={form.confirmNewPassword}
