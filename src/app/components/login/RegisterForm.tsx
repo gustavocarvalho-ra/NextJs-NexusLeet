@@ -37,8 +37,6 @@ export default function RegisterForm() {
       body: JSON.stringify(form),
     })
 
-    // const data = await res.json();
-
     if (res.ok) {
       const loginResult = await signIn("credentials", {
         redirect: false,
@@ -49,15 +47,9 @@ export default function RegisterForm() {
       if (loginResult?.ok) {
         setSuccess("Cadastro realizado com sucesso");
         router.push("/my-account/user")
-        // // setTimeout(() => router.push("/login"), 1500);
       } else {
         console.error("Login automático falhou")
       }
-      // setEmail("");
-      // setName("");
-      // setPassword("");
-
-      // router.push("/my-account/user")
     } else {
       console.error("Erro de cadastro")
     }
