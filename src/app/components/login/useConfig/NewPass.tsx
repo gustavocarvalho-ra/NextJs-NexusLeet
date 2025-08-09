@@ -48,7 +48,7 @@ export default function ChangePasswordForm() {
 
       <Input
         type="password"
-        placeholder="Nova senha"
+        placeholder="Confirme a nova senha"
         value={form.confirmNewPassword}
         onChange={(e) => setForm({...form, confirmNewPassword: e.target.value})}
       />
