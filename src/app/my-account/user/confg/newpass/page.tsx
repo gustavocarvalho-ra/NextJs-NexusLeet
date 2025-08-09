@@ -16,7 +16,7 @@ export default async function NewPass() {
     <div className="w-screen h-screen">
       <Header />
 
-      <div className="w-full h-full flex justify-center items-center">
+      <div className="w-full h-5/6 flex justify-center items-center">
         <ChangePasswordForm />
       </div>
 
