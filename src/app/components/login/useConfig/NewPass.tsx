@@ -29,7 +29,7 @@ export default function ChangePasswordForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="absolute">
+    <form onSubmit={handleSubmit} className="absolute" name="formNewPass">
       <Input
         type="password" 
         placeholder="Senha atual"
