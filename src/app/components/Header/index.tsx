@@ -20,7 +20,7 @@ export default async function Header() {
             Nexus Leet
           </Link>
 
-          <input placeholder='Buscar produto' className='bg-(--color-sec) hover:bg-() w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
+          <input name="searchProducts" placeholder='Buscar produto' className='bg-(--color-sec) hover:bg-() w-1/3 h-8 pl-2.5 text-black font-medium rounded-sm'/>
 
           <Link href={"/my-account"} className='flex items-center text-(--text-amber)'>
             <FaRegUser className='text-3xl' />
@@ -42,7 +42,7 @@ export default async function Header() {
       </Link>
       
       <div className='w-1/3'>
-        <input placeholder='Buscar produto' className='bg-(--color-sec) w-full h-8 pl-2.5 text-black font-medium rounded-sm'/>
+        <input name="searchProducts" placeholder='Buscar produto' className='bg-(--color-sec) w-full h-8 pl-2.5 text-black font-medium rounded-sm'/>
         <Nav />
       </div>
 
