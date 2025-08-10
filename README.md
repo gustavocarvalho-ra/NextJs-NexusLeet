@@ -18,6 +18,7 @@ Completed Tasks - ✔
 
 Tasks - 
 
+- Intriduzir configuração para deletar a conta de usuário
 - Introduzir configuração para mudança de email de usuário
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
