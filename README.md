@@ -18,6 +18,7 @@ Completed Tasks - ✔
 
 Tasks - 
 
+- Introduzir configuração para mudança de email de usuário
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
 - Introduzir os produtos do BD
