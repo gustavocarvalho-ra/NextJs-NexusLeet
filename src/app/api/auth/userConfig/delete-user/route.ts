@@ -3,24 +3,20 @@ import { prisma } from "@/app/lib/prisma";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/lib/auth";
 
-export async function DELETE(req: Request) {
+export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
 
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Não autorizado." }, { status:401 });
   }
 
-  try {
-    await prisma.user.delete({
-      where: {
-        email: session.user.email,
-      },
-    });
+  const { password } = await req.json();
+  if (!password) {
+    return NextResponse.json({ error: "Senha obrigatória" }, { status: 400 })
+  }
 
-    return NextResponse.json({ message: "Usuário deletado com sucesso." });
-  } catch (error) {
-    console.error("Erro ao deletar usuário", error);
-    
-    return NextResponse.json({ error: "Erro ao deletar usuário." }, {status: 500 });
+  const user = await prisma.user.findUnique({
+    where: { email: session.user.email },
+  })
   }
 }
