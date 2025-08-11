@@ -20,13 +20,13 @@ export function DeleteAccountModal({ onClose }: { onClose: () => void }) {
     const data = await res.json()
 
     if (res.ok) {
-      console.log("Usuário deletado");
+      alert("Conta deletada com sucesso!");
+      window.location.href = "/";
     } else {
-      console.error("erro ao deletar");
+      setError(data.error || "erro ao deletar");
     }
+    setLoading(false);
   }
-
-
 
   return (
     <button onClick={handleDeleteUser}>
