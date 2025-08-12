@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 
-export function DeleteAccountModal({ onClose }: { onClose: () => void }) {
+export default function DeleteAccountModal() {
+  const [showModal, setShowModal]
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -29,8 +30,24 @@ export function DeleteAccountModal({ onClose }: { onClose: () => void }) {
   }
 
   return (
-    <button onClick={handleDeleteUser}>
-      Deletar usuário
-    </button>
+    <>
+      <button onClick={() => setShowModal(true)} className="bg-red-500 text-white px-4 py-2 rounded-lg">
+        Deletar Conta
+      </button>
+      {showModal && (
+        <div>
+          <div>
+            <h2></h2>
+            <input type="password" />
+            {error && <p>{error}</p>}
+
+            <div>
+              <button></button>
+              <button onClick={handleDeleteUser}>{loading ? "Deletando..." : "Confirmar"}</button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
