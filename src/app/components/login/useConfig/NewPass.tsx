@@ -29,8 +29,8 @@ export default function ChangePasswordForm() {
   }
 
   return (
-    <div className="w-full h-full justify-center items-center">
-      <form onSubmit={handleSubmit} className="" name="formNewPass">
+    <div className="w-full h-full flex justify-center items-center">
+      <form onSubmit={handleSubmit} className="w-1/4 flex flex-col gap-3" name="formNewPass">
         <Input
           type="password" 
           placeholder="Senha atual"
