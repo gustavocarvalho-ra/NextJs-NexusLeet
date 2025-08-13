@@ -30,7 +30,7 @@ export default function ChangePasswordForm() {
 
   return (
     <div className="w-full h-full justify-center items-center">
-      <form onSubmit={handleSubmit} className="absolute" name="formNewPass">
+      <form onSubmit={handleSubmit} className="" name="formNewPass">
         <Input
           type="password" 
           placeholder="Senha atual"
