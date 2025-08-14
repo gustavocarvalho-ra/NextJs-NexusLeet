@@ -15,10 +15,10 @@ Completed Tasks - ✔
 - Introduzir modal para o component Header ✔
 - Introduzir botões para configurações de usuário (sem lógica) ✔
 - Introduzir funcionalidade de edição de senha de usuário ✔
+- Intriduzir configuração para deletar a conta de usuário ✔
 
 Tasks - 
 
-- Intriduzir configuração para deletar a conta de usuário
 - Introduzir configuração para mudança de email de usuário
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
