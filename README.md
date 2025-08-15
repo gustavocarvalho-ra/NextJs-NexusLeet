@@ -19,6 +19,7 @@ Completed Tasks - ✔
 
 Tasks - 
 
+- Introduzir configuração de mudança de nome de usuário
 - Introduzir configuração para mudança de email de usuário
 - Introduzir "USER ADMIN"
 - Introduzir dashboard
