@@ -32,6 +32,7 @@ export default function ChangePasswordForm() {
     <div className="w-full h-full flex justify-center items-center">
       <div className="h-1/2 w-1/4 bg-amber-800 p-5 rounded-lg flex flex-col justify-center">
         <form onSubmit={handleSubmit} className="w-full flex flex-col gap-3 items-center" name="formNewPass">
+          <h1 className="font-semibold text-3xl">Alterar Senha</h1>
           <Input
             type="password" 
             placeholder="Senha atual"
