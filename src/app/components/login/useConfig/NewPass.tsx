@@ -30,8 +30,8 @@ export default function ChangePasswordForm() {
 
   return (
     <div className="w-full h-full flex justify-center items-center">
-      <div className="h-1/2 w-1/4 bg-amber-800 p-5 rounded-lg">
-        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-3" name="formNewPass">
+      <div className="h-1/2 w-1/4 bg-amber-800 p-5 rounded-lg flex flex-col justify-center">
+        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-3 items-center" name="formNewPass">
           <Input
             type="password" 
             placeholder="Senha atual"
@@ -52,7 +52,7 @@ export default function ChangePasswordForm() {
             value={form.confirmNewPassword}
             onChange={(e) => setForm({...form, confirmNewPassword: e.target.value})}
           />
-          <button type="submit" className="bg-blue-600 text-amber-400 rounded-lg">
+          <button type="submit" className="bg-blue-600 text-amber-400 rounded-lg w-1/2">
             Alterar senha
           </button>
           {message && <p>{message}</p>}
