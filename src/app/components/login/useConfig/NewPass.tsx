@@ -32,7 +32,7 @@ export default function ChangePasswordForm() {
   return (
     <div className="w-full h-full flex justify-center items-center">
       <div className="h-1/2 w-1/4 bg-slate-500/15 border-2 border-(--text-amber) p-5 rounded-lg flex flex-col justify-center">
-        <form onSubmit={handleSubmit} className="w-full h-full flex flex-col gap-3 items-center" name="formNewPass">
+        <form onSubmit={handleSubmit} className="w-full h-full flex flex-col gap-8 items-center" name="formNewPass">
           <h1 className="font-semibold text-3xl text-(--text-amber)">Alterar Senha</h1>
           
           <div className="w-full h-full relative flex flex-col gap-3 justify-items-center">
