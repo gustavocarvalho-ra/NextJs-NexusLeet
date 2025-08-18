@@ -41,7 +41,7 @@ export default function ChangePasswordForm() {
               placeholder="Senha atual"
               value={form.currentPassword}
               onChange={(e) => setForm({...form, currentPassword: e.target.value})}
-              className="h-1/6"
+              className="h-1/6 border-2 hover:border-(--text-amber) bg-(--color-sec)"
             />
 
             <Input
@@ -49,7 +49,7 @@ export default function ChangePasswordForm() {
               placeholder="Nova senha"
               value={form.newPassword}
               onChange={(e) => setForm({...form, newPassword: e.target.value})}
-              className="h-1/6"
+              className="h-1/6 border-2 hover:border-(--text-amber) bg-(--color-sec)"
             />
 
             <Input
@@ -57,10 +57,10 @@ export default function ChangePasswordForm() {
               placeholder="Confirme a nova senha"
               value={form.confirmNewPassword}
               onChange={(e) => setForm({...form, confirmNewPassword: e.target.value})}
-              className="h-1/6"
+              className="h-1/6 border-2 hover:border-(--text-amber) bg-(--color-sec)"
             />
 
-            <Button type="submit" className=" rounded-lg w-1/2 static">
+            <Button type="submit" className="mt-4 rounded-lg w-1/2 static">
               Alterar senha
             </Button>
 
