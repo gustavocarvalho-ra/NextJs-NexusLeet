@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function DeleteAccountModal() {
-  const [showModal, setShowModal]
+  const [showModal, setShowModal] = useState(false);
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -24,7 +24,7 @@ export default function DeleteAccountModal() {
       alert("Conta deletada com sucesso!");
       window.location.href = "/";
     } else {
-      setError(data.error || "erro ao deletar");
+      setError(data.error || "erro ao deletar conta");
     }
     setLoading(false);
   }
@@ -38,7 +38,7 @@ export default function DeleteAccountModal() {
         <div>
           <div>
             <h2></h2>
-            <input type="password" />
+            <input type="password" onChange={(e) => setPassword(e.target.value)} />
             {error && <p>{error}</p>}
 
             <div>
