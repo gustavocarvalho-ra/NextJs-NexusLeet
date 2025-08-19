@@ -1,11 +1,15 @@
+import Header from '@/app/components/Header';
+import CardUserConfg from '@/app/components/ui/CardUserConfg';
+
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/lib/auth';
-import Header from '@/app/components/Header';
-import { redirect } from 'next/navigation';
+
 import Image  from 'next/image';
-import CardUserConfg from '@/app/components/ui/CardUserConfg';
-import { FaRegUser, FaUnlockAlt, FaRegCreditCard, FaUserAltSlash } from 'react-icons/fa';
+import { redirect } from 'next/navigation';
+
+import { FaUnlockAlt, FaRegCreditCard, FaUserAltSlash } from 'react-icons/fa';
 import { MdOutlinePrivacyTip, MdLocationOn  } from "react-icons/md";
+import { GoGear } from "react-icons/go";
 
 
 export default async function MyAccontUser() {
@@ -47,9 +51,9 @@ export default async function MyAccontUser() {
               />
               <CardUserConfg
                 href='/my-account/user/confg'
-                icon={<FaRegUser />}
-                TextStr="Dados da sua conta"
-                AboutStr="Dados pessoais."
+                icon={<GoGear />}
+                TextStr="Configuração de Conta"
+                AboutStr="Configurações para mudança de senha, nome e e-mail."
               />
               <CardUserConfg
                 href='/'
