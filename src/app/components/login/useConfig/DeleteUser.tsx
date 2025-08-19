@@ -42,8 +42,10 @@ export default function DeleteAccountModal() {
             {error && <p>{error}</p>}
 
             <div>
-              <button></button>
-              <button onClick={handleDeleteUser}>{loading ? "Deletando..." : "Confirmar"}</button>
+              <button onClick={() => setShowModal(false)}>Cancelar</button>
+              <button onClick={handleDeleteUser}>
+                {loading ? "Deletando..." : "Confirmar"}
+              </button>
             </div>
           </div>
         </div>
