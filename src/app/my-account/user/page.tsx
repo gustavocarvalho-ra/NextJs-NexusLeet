@@ -4,7 +4,7 @@ import Header from '@/app/components/Header';
 import { redirect } from 'next/navigation';
 import Image  from 'next/image';
 import CardUserConfg from '@/app/components/ui/CardUserConfg';
-import { FaRegUser, FaUnlockAlt, FaRegCreditCard } from 'react-icons/fa';
+import { FaRegUser, FaUnlockAlt, FaRegCreditCard, FaUserAltSlash } from 'react-icons/fa';
 import { MdOutlinePrivacyTip, MdLocationOn  } from "react-icons/md";
 
 
@@ -32,6 +32,13 @@ export default async function MyAccontUser() {
               </div>
             </div>
             <div className='flex gap-6 flex-wrap'>
+              <CardUserConfg
+                href='/my-account/user/delete-count'
+                icon={<FaUserAltSlash />}
+                TextStr="Deletar Conta"
+                AboutStr="Deletar suas informações de conta do site."
+              />
+
               <CardUserConfg
                 href='/'
                 icon={<FaUnlockAlt />}
