@@ -37,7 +37,7 @@ export default async function MyAccontUser() {
             </div>
             <div className='flex gap-6 flex-wrap'>
               <CardUserConfg
-                href='/my-account/user/delete-acount'
+                href='/my-account/user/confg/delete-acount'
                 icon={<FaUserAltSlash />}
                 TextStr="Deletar Conta"
                 AboutStr="Deletar suas informações de conta do site."
@@ -50,7 +50,7 @@ export default async function MyAccontUser() {
                 AboutStr="Configurações de segurança da sua conta."
               />
               <CardUserConfg
-                href='/my-account/user/confg'
+                href='/my-account/user/confg/newpass'
                 icon={<GoGear />}
                 TextStr="Configuração de Conta"
                 AboutStr="Configurações para mudança de senha, nome e e-mail."
