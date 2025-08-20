@@ -8,7 +8,7 @@ export default function DeletAcount() {
 
       <div className="w-full h-full flex flex-col justify-center items-center ">
         <h1>Quer mesmo deletar sua conta? :(</h1>
-        <div className="w-full flex justify-center">
+        <div className="w-full h-1/4 flex justify-center">
           <DeleteAccountModal />
         </div>
       </div>
