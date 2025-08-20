@@ -31,11 +31,12 @@ export default function DeleteAccountModal() {
 
   return (
     <>
-      <button onClick={() => setShowModal(true)} className="bg-red-500 text-white px-4 py-2 rounded-lg">
+      <button onClick={() => setShowModal(true)} className="bg-red-500 text-white px-4 py-2 rounded-lg"
+      >
         Deletar Conta
       </button>
       {showModal && (
-        <div className="w-1/4 h-1/4 relative">
+        <div className="w-1/4 h-1/4 fixed flex items-center justify-center bg-black/50">
           <div>
             <h2></h2>
             <input type="password" onChange={(e) => setPassword(e.target.value)} />
