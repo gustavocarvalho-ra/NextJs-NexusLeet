@@ -36,7 +36,7 @@ export default function DeleteAccountModal() {
         Deletar Conta
       </button>
       {showModal && (
-        <div className="w-1/4 h-1/4 fixed flex items-center justify-center bg-black/50">
+        <div className="w-1/4 h-1/4 fixed mt-30 flex items-center justify-center bg-black/20 rounded-lg">
           <div>
             <h2></h2>
             <input type="password" onChange={(e) => setPassword(e.target.value)} />
