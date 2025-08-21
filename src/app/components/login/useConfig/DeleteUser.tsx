@@ -37,9 +37,9 @@ export default function DeleteAccountModal() {
       </button>
       {showModal && (
         <div className="w-1/4 h-1/4 fixed mt-30 flex items-center justify-center bg-black/20 rounded-lg">
-          <div>
-            <h2></h2>
-            <input type="password" onChange={(e) => setPassword(e.target.value)} />
+          <div className="flex flex-col justify-center">
+            <h2 className="text-lg font-medium">Coloque sua senha para confirmar</h2>
+            <input className="" type="password" onChange={(e) => setPassword(e.target.value)} />
             {error && <p>{error}</p>}
 
             <div>
