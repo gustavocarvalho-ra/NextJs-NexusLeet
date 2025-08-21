@@ -39,9 +39,9 @@ export default function DeleteAccountModal() {
       </button>
       {showModal && (
         <div className="w-1/4 h-1/4 fixed mt-30 flex items-center justify-center bg-black/20 rounded-lg">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-6">
             <div className="flex flex-col items-center gap-3">
-              <h2 className="text-lg font-medium">Coloque sua senha para confirmar</h2>
+              <h2 className="text-lg font-medium">Coloque sua senha para confirmar.</h2>
 
               <input 
                 className="w-3/4 bg-(--bg-white) rounded-lg p-0.5 pl-3" 
@@ -53,7 +53,7 @@ export default function DeleteAccountModal() {
 
             <div className=" flex justify-evenly items-center">
               <button 
-                className="cursor-pointer p-1 rounded-lg hover:bg-red-500 transition ease-in" 
+                className="cursor-pointer p-1 rounded-lg hover:text-white hover:bg-red-500 transition ease-in" 
                 onClick={() => setShowModal(false)}
                 >
                 Cancelar
@@ -62,7 +62,7 @@ export default function DeleteAccountModal() {
               <p>|</p>
               
               <button 
-                className="cursor-pointer p-1 rounded-lg hover:bg-green-500 transition ease-in" 
+                className="cursor-pointer p-1 rounded-lg hover:text-white hover:bg-green-500 transition ease-in" 
                 onClick={handleDeleteUser}
                 >
                 {loading ? "Deletando..." : "Confirmar"}
