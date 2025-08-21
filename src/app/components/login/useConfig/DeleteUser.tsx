@@ -42,9 +42,9 @@ export default function DeleteAccountModal() {
             <input className="" type="password" onChange={(e) => setPassword(e.target.value)} />
             {error && <p>{error}</p>}
 
-            <div>
-              <button onClick={() => setShowModal(false)}>Cancelar</button>
-              <button onClick={handleDeleteUser}>
+            <div className=" flex justify-evenly">
+              <button className="cursor-pointer" onClick={() => setShowModal(false)}>Cancelar</button>
+              <button className="cursor-pointer" onClick={handleDeleteUser}>
                 {loading ? "Deletando..." : "Confirmar"}
               </button>
             </div>
