@@ -43,8 +43,8 @@ export default function DeleteAccountModal() {
             {error && <p>{error}</p>}
 
             <div className=" flex justify-evenly">
-              <button className="cursor-pointer" onClick={() => setShowModal(false)}>Cancelar</button>
-              <button className="cursor-pointer" onClick={handleDeleteUser}>
+              <button className="cursor-pointer bg-red-500" onClick={() => setShowModal(false)}>Cancelar</button>
+              <button className="cursor-pointer bg-green-500" onClick={handleDeleteUser}>
                 {loading ? "Deletando..." : "Confirmar"}
               </button>
             </div>
