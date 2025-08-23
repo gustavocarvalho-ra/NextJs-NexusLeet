@@ -56,20 +56,18 @@ export default async function Header() {
           }
 
           modalContent={
-            <div className='font-medium text-(--inv-sec) flex flex-col w-full h-full'>
-              <div className='flex w-full h-full gap-1.5'>
+            <div className='font-medium text-(--inv-sec) flex flex-col w-full h-full gap-3'>
+              <div className='flex w-full h-1/4 gap-1.5 items-center'>
                 <FaRegUser className='text-2xl' />
                 <p>{session.user?.name}</p>
-
               </div>
+                
               <div className='w-full h-full flex flex-col gap-1.5 '>
                 <Link href={"/my-account/user"} className='hover:text-(--text-amber)'>Meu perfil</Link>
-
                 <ButtonSignOut className='flex cursor-pointer hover:text-(--text-amber)' />
               </div>
             </div>
-          }/>
-        
+          } />
       </div>
     </div>
   )
