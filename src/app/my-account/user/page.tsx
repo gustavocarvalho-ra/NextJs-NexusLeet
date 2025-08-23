@@ -50,7 +50,7 @@ export default async function MyAccontUser() {
                 AboutStr="Configurações de segurança da sua conta."
               />
               <CardUserConfg
-                href='/my-account/user/confg/newpass'
+                href='/my-account/user/confg'
                 icon={<GoGear />}
                 TextStr="Configuração de Conta"
                 AboutStr="Configurações para mudança de senha, nome e e-mail."
