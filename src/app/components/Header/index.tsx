@@ -57,7 +57,7 @@ export default async function Header() {
           modalContent={
             <div className='font-medium text-(--inv-sec) flex flex-col w-full h-full gap-3'>
               <div className='flex w-full h-1/4 gap-1.5 items-center font-semibold'>
-                <FaRegUser className='text-3xl' />
+                <FaRegUser className='text-4xl' />
                 <p>{session.user?.name}</p>
               </div>
                 
