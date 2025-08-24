@@ -1,4 +1,3 @@
-// "use client"
 import { getServerSession } from 'next-auth';
 import Link from "next/link"
 import Nav from '../Navbar';
@@ -58,7 +57,7 @@ export default async function Header() {
           modalContent={
             <div className='font-medium text-(--inv-sec) flex flex-col w-full h-full gap-3'>
               <div className='flex w-full h-1/4 gap-1.5 items-center font-semibold'>
-                <FaRegUser className='text-2xl' />
+                <FaRegUser className='text-3xl' />
                 <p>{session.user?.name}</p>
               </div>
                 
