@@ -1,7 +1,16 @@
 import Header from "@/app/components/Header"
 import DeleteAccountModal from "@/app/components/login/useConfig/DeleteUser"
+import { authOptions } from "@/app/lib/auth";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
-export default function DeletAcount() {
+export default async function DeletAcount() {
+  const session = await getServerSession(authOptions)
+
+  if (!session) {
+    redirect("/my-account");
+  }
+
   return (
     <div className="w-screen h-screen">
       <Header />
