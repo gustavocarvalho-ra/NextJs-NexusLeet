@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import { signOut } from "next-auth/react"
 
 export default function DeleteAccountModal() {
   const [showModal, setShowModal] = useState(false);
@@ -21,8 +22,7 @@ export default function DeleteAccountModal() {
     const data = await res.json()
 
     if (res.ok) {
-      alert("Conta deletada com sucesso!");
-      window.location.href = "/";
+      await signOut({ callbackUrl: "/"})
     } else {
       setError(data.error || "erro ao deletar conta");
     }
