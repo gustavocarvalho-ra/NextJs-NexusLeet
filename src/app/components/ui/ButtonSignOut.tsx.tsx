@@ -8,7 +8,10 @@ interface ButtonSignOutProps {
 
 export default function ButtonSignOut({ className }:ButtonSignOutProps) {
   return(
-    <button className={className} onClick={() => signOut()}>
+    <button 
+      className={className} 
+      onClick={() => signOut({ callbackUrl: "/"})}
+    >
       Sair
     </button>
   )
