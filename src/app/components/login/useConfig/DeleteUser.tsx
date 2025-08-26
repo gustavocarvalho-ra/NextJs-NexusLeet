@@ -22,7 +22,7 @@ export default function DeleteAccountModal() {
     const data = await res.json()
 
     if (res.ok) {
-      await signOut({ callbackUrl: "/"})
+      await signOut({ callbackUrl: "/my-account"})
     } else {
       setError(data.error || "erro ao deletar conta");
     }
