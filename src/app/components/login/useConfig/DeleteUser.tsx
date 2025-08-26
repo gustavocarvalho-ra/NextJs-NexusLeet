@@ -10,24 +10,35 @@ export default function DeleteAccountModal() {
   const [error, setError] = useState("");
 
   async function handleDeleteUser() {
+    if (!password) {
+      setError("Digite sua senha para confirmar.");
+      return;
+    }
+
     setLoading(true);
     setError("");
 
-    const res = await fetch("/api/auth/userConfig/delete-user", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password }),
-    });
-
-    const data = await res.json()
-
-    if (res.ok) {
-      await signOut({ callbackUrl: "/my-account"})
-    } else {
-      setError(data.error || "erro ao deletar conta");
+    try {
+      const res = await fetch("/api/auth/userConfig/delete-user", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+      
+      if (res.ok) {
+        await signOut({ callbackUrl: "/my-account"})
+      } else {
+        const data = await res.json()
+        setError(data.error || "erro ao deletar conta");
+      }
+    } catch (err) {
+      console.error(err);
+      setError("Erro de conexão.");
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   }
+
 
   return (
     <>
