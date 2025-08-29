@@ -31,7 +31,7 @@ export default function UpdateName() {
   };
   
   return (
-    <Form className="w-1/4 h-1/3 bg-slate-500/15 flex flex-col items-center justify-center" action={handleSubmit}>
+    <Form className="w-1/4 h-1/3 bg-slate-500/15 flex flex-col items-center justify-center gap-5" action={handleSubmit}>
       <input
         type="text" 
         value={newName}
@@ -39,10 +39,13 @@ export default function UpdateName() {
         placeholder="Novo nome"
         className="w-4/6"
       />
-      <button type="submit">
+      <button 
+        type="submit"
+        className="cursor-pointer"
+      >
         Alterar nome
       </button>
-      {message && <p>{message}</p>}
+      {message && <p className="text-red-500">{message}</p>}
     </Form>
   )  
 }
