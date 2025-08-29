@@ -41,15 +41,15 @@ export default function DeleteAccountModal() {
 
 
   return (
-    <>
+    <div className="w-full h-5/6 flex justify-center">
       <button 
         onClick={() => setShowModal(true)} 
-        className="bg-red-500 text-white px-4 py-2 rounded-lg cursor-pointer"
+        className="bg-red-500 text-white px-4 py-2 rounded-lg cursor-pointer flex items-center"
       >
         Deletar Conta
       </button>
       {showModal && (
-        <div className="w-1/4 h-1/4 fixed mt-30 flex items-center justify-center bg-black/20 rounded-lg">
+        <div className="w-1/4 h-1/4 fixed mt-30 flex items-center justify-center bg-slate-500/15 rounded-lg">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col items-center gap-3">
               <h2 className="text-lg font-medium">Coloque sua senha para confirmar.</h2>
@@ -82,6 +82,6 @@ export default function DeleteAccountModal() {
           </div>
         </div>
       )}
-    </>
+    </div>
   )
 }
