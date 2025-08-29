@@ -1,15 +1,15 @@
 "use client"
 
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 import Form from 'next/form';
 
 export default function UpdateName() {
   const [newName, setNewName] = useState("");
   const [message, setMessage] = useState("");
+  const { data: session, update} = useSession();
 
   const handleSubmit = async () => {
-
-
 
     try {
       const res = await fetch("/api/auth/userConfig/change-name", {
@@ -23,6 +23,7 @@ export default function UpdateName() {
       if (res.ok) {
         setMessage("Nome atualidado com sucesso!");
         setNewName("");
+        update({ ...session, user: { ...session?.user, name: newName} });
       } else {
         setMessage(data.error || "Erro ao atualizar nome");
       }
