@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import Form from 'next/form';
 
 export default function UpdateName() {
   const [newName, setNewName] = useState("");
@@ -32,7 +33,7 @@ export default function UpdateName() {
   };
   
   return (
-    <form onSubmit={handleSubmit}>
+    <Form action={handleSubmit}>
       <input
         type="text" 
         value={newName}
@@ -43,6 +44,6 @@ export default function UpdateName() {
         Alterar nome
       </button>
       {message && <p>{message}</p>}
-    </form>
+    </Form>
   )  
 }
