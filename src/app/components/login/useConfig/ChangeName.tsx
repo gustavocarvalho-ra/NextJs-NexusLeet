@@ -45,7 +45,7 @@ export default function UpdateName() {
       >
         Alterar nome
       </button>
-      {message && <p className="text-red-500">{message}</p>}
+      {message && <p className="text-(--error-text) font-semibold">{message}</p>}
     </Form>
   )  
 }
