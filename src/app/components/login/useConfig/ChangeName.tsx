@@ -31,12 +31,13 @@ export default function UpdateName() {
   };
   
   return (
-    <Form action={handleSubmit}>
+    <Form className="w-1/4 h-1/3 bg-slate-500/15 flex flex-col items-center justify-center" action={handleSubmit}>
       <input
         type="text" 
         value={newName}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewName(e.target.value)}
         placeholder="Novo nome"
+        className="w-4/6"
       />
       <button type="submit">
         Alterar nome
