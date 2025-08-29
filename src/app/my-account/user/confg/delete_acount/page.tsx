@@ -12,7 +12,7 @@ export default async function DeletAcount() {
   }
 
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-5/6">
       <Header />
 
       <div className="w-full h-full flex flex-col justify-start items-center pt-10 gap-3">
