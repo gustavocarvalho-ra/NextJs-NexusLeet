@@ -59,7 +59,7 @@ export default function DeleteAccountModal() {
                 type="password" 
                 onChange={(e) => setPassword(e.target.value)} 
               />
-                {error && <p>{error}</p>}
+                {error && <p className="text-(--error-text) font-semibold">{error}</p>}
             </div>
 
             <div className=" flex justify-evenly items-center">

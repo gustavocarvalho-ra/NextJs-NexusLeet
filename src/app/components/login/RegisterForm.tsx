@@ -116,7 +116,7 @@ export default function RegisterForm() {
             <Button type="submit">
               Cadastrar
             </Button>
-            {error && <p className="">{error}</p>}
+            {error && <p className="text-(--error-text) font-semibold">{error}</p>}
             {success && <p className="">{success}</p>}
           </form>
         </div>
