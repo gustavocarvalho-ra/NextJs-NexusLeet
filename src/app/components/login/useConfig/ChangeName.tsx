@@ -44,7 +44,7 @@ export default function UpdateName() {
         type="submit"
         className="cursor-pointer"
       >
-        Alterar nome
+        Confirmar
       </button>
       {message && <p className="text-(--error-text) font-semibold">{message}</p>}
     </Form>
