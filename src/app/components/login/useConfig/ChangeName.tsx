@@ -32,7 +32,7 @@ export default function UpdateName() {
   
   return (
     <Form className="w-1/4 h-1/3 bg-slate-500/15 flex flex-col items-center justify-center gap-5 relative rounded-lg" action={handleSubmit}>
-      <h1 className="font-semibold text-2xl absolute top-8">Alterar nome de usuário</h1>
+      <h1 className="font-semibold text-2xl absolute top-6">Alterar nome de usuário</h1>
       <input
         type="text" 
         value={newName}
@@ -42,7 +42,7 @@ export default function UpdateName() {
       />
       <button 
         type="submit"
-        className="cursor-pointer"
+        className="cursor-pointer p-1 rounded-lg hover:text-white hover:bg-green-500 transition ease-in"
       >
         Confirmar
       </button>
