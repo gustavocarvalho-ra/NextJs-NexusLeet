@@ -31,7 +31,8 @@ export default function UpdateName() {
   };
   
   return (
-    <Form className="w-1/4 h-1/3 bg-slate-500/15 flex flex-col items-center justify-center gap-5" action={handleSubmit}>
+    <Form className="w-1/4 h-1/3 bg-slate-500/15 flex flex-col items-center justify-center gap-5 relative" action={handleSubmit}>
+      <h1 className="font-semibold text-2xl absolute top-8">Alterar nome de usuário</h1>
       <input
         type="text" 
         value={newName}
