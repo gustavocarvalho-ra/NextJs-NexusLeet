@@ -38,7 +38,7 @@ export default function UpdateName() {
         value={newName}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewName(e.target.value)}
         placeholder="Novo nome"
-        className="w-4/6 h-6 bg-(--bg-white)"
+        className="w-4/6 h-8 p-3 bg-(--bg-white)"
       />
       <button 
         type="submit"
