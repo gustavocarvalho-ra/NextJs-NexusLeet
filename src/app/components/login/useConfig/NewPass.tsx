@@ -69,7 +69,7 @@ export default function ChangePasswordForm() {
               Alterar senha
             </Button>
 
-            {message && <p>{message}</p>}
+            {message && <p className="text-(--success-text) font-semibold">{message}</p>}
             {error && <p className="text-(--error-text) font-semibold">{error}</p>}
           </div>
         </form>
