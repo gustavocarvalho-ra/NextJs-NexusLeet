@@ -47,7 +47,7 @@ export default function UpdateName() {
       >
         Confirmar
       </button>
-      {message && <p className="text-green-500 font-semibold">{message}</p>}
+      {message && <p className="text-(--success-text) font-semibold">{message}</p>}
       {error && <p className="text-(--error-text) font-semibold">{error}</p>}
     </Form>
   )  
