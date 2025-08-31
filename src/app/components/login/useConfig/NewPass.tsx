@@ -13,20 +13,25 @@ export default function ChangePasswordForm() {
     e.preventDefault();
     setError("");
 
-    if (form.newPassword !== form.confirmNewPassword) {
-      setError("As senhas não coincidem!")
-      return;
+    try {
+      if (form.newPassword !== form.confirmNewPassword) {
+        setError("As senhas não coincidem!")
+        return;
+      }
+
+      const res = await fetch("/api/auth/userConfig/change-password", {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const data = await res.json();
+      setMessage(data.message || data.error);
+
+    } catch (error) {
+      console.log(error)
+      setMessage("Erro de conexão")
     }
-
-    const res = await fetch("/api/auth/userConfig/change-password", {
-      method: "POST",
-      body: JSON.stringify(form),
-      headers: { "Content-Type": "application/json" },
-    });
-
-
-    const data = await res.json();
-    setMessage(data.message || data.error);
   }
 
   return (
