@@ -6,6 +6,7 @@ import Form from 'next/form';
 export default function UpdateName() {
   const [newName, setNewName] = useState("");
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = async () => {
 
@@ -22,7 +23,7 @@ export default function UpdateName() {
         setMessage("Nome atualidado com sucesso!");
         setNewName("");
       } else {
-        setMessage(data.error || "Erro ao atualizar nome");
+        setError(data.error || "Erro ao atualizar nome");
       }
     } catch (error) {
       console.error(error)
@@ -46,7 +47,8 @@ export default function UpdateName() {
       >
         Confirmar
       </button>
-      {message && <p className="text-(--error-text) font-semibold">{message}</p>}
+      {message && <p className="text-green-500 font-semibold">{message}</p>}
+      {error && <p className="text-(--error-text) font-semibold">{error}</p>}
     </Form>
   )  
 }
