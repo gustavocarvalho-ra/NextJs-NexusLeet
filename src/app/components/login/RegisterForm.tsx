@@ -79,7 +79,7 @@ export default function RegisterForm() {
               onChange={(e) => setForm({...form, email: e.target.value})}
               icon={MdOutlineMail}
             />
-            <div className="border-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
+            <div className="border-b-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
               <Input
                 id="password"
                 type={showPassword ? "text" : "password"}
@@ -96,7 +96,7 @@ export default function RegisterForm() {
                 {showPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>}
               </button>
             </div>
-            <div className="border-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
+            <div className="border-b-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
               <Input
                 id="confirmPassword"
                 type={showConfirmPassword ? "text" : "password"}
