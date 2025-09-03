@@ -90,6 +90,7 @@ export default function RegisterForm() {
               />
               <button
                 type="button"
+                tabIndex={-1}
                 className=""
                 onClick={() => setShowPassword(!showPassword)}
               >
@@ -107,6 +108,7 @@ export default function RegisterForm() {
                 />
               <button
                 type="button"
+                tabIndex={-1}
                 className=""
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
