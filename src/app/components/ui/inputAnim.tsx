@@ -20,7 +20,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
           name={inputName}
           type={type}
           required={required}
-          placeholder={placeholder || ' '} // Espaço para evitar comportamento inconsistente
+          placeholder={placeholder || ' '}
           className={`px-4 py-3 text-base outline-none border-2 rounded transition-all duration-200 peer 
             ${error 
               ? 'border-red-500 focus:border-red-700' 
@@ -37,7 +37,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
               transition-all duration-200 pointer-events-none peer-focus:top-1 peer-focus:text-sm
               peer-focus:text-blue-600 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
               ${error ? 'text-red-500 peer-focus:text-red-600' : ''}
-              bg-white transform -translate-y-1/2 peer-focus:-translate-y-4`}
+              bg-transparent transform -translate-y-1/2 peer-focus:-translate-y-4`}
           >
             {label}
             {required && <span className="text-red-500 ml-1">*</span>}
@@ -49,7 +49,8 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
         )}
       </div>
     )
-});
+  }
+);
 
 InputAt.displayName = "Input";
 

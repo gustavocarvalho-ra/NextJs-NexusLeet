@@ -54,7 +54,11 @@ export default function LoginForm() {
               onChange={(e) => setPassword(e.target.value)}
               icon={RiLockPasswordLine}
             />
-            <InputAt />
+            <InputAt
+              required
+              label="E-mail"
+              type="email"
+            />
             <Button type="submit">
               Entrar
             </Button>
