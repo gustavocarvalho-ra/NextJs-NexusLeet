@@ -7,7 +7,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { DivInputIcon } from "../ui/DivInputIcon";
 import { Button } from "../ui/ButtonForm";
-import InputAt from "../ui/inputAnim";
+import { InputAt } from "../ui/inputAnim";
 
 
 
