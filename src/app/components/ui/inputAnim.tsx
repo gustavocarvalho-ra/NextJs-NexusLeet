@@ -1,30 +1,52 @@
 import React, { InputHTMLAttributes } from 'react';
 
-export type InputProps = InputHTMLAttributes<HTMLInputElement>;
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  error?: string;
+}
 
 const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, id, name, ...props }, ref) => {
+  ({ className, type, id, name, label, error, placeholder, required, ...props }, ref) => {
     
-    const genereteId = React.useId();
-    const inputId = id || name || genereteId;
+    const generatedId = React.useId();
+    const inputId = id || name || generatedId;
+    const inputName = name || inputId;
 
     return (
-      <div className="relative">
+      <div className="relative flex flex-col">
         <input 
-          required
           ref={ref}
-          id={id}
-          name={name || inputId}
+          id={inputId}
+          name={inputName}
           type={type}
-          className={`px-4 py-2 text-lg outline-none border-2 border-gray-400 rounded hover:border-gray-600 duration-200 peer focus:border-red-700 bg-inherit ${className}`}
+          required={required}
+          placeholder={placeholder || ' '} // Espaço para evitar comportamento inconsistente
+          className={`px-4 py-3 text-base outline-none border-2 rounded transition-all duration-200 peer 
+            ${error 
+              ? 'border-red-500 focus:border-red-700' 
+              : 'border-gray-400 hover:border-gray-600 focus:border-blue-600'
+            }
+            ${className}`}
           {...props}
         />
-        <label 
-          htmlFor={id}
-          className={`absolute left-0 top-2 px-1 text-lg tracking-wide peer-focus:text-red-600 pointer-events-none duration-200 peer-focus:text-sm peer-focus:-translate-y-5 bg-gray-200 ml-2 peer-valid:text-sm peer-valid:-translate-y-5 ${className}`}
-        >
-          test input
-        </label>
+        
+        {label && (
+          <label 
+            htmlFor={inputId}
+            className={`absolute left-3 top-3 px-1 text-base text-gray-600 tracking-wide 
+              transition-all duration-200 pointer-events-none peer-focus:top-1 peer-focus:text-sm
+              peer-focus:text-blue-600 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+              ${error ? 'text-red-500 peer-focus:text-red-600' : ''}
+              bg-white transform -translate-y-1/2 peer-focus:-translate-y-4`}
+          >
+            {label}
+            {required && <span className="text-red-500 ml-1">*</span>}
+          </label>
+        )}
+        
+        {error && (
+          <span className="text-red-500 text-sm mt-1">{error}</span>
+        )}
       </div>
     )
 });
