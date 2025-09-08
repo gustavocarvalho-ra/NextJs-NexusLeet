@@ -56,8 +56,8 @@ export default function LoginForm() {
             />
             <InputAt
               required
-              label="E-mail"
-              type="email"
+              label="Nome"
+              type="name"
             />
             <Button type="submit">
               Entrar
