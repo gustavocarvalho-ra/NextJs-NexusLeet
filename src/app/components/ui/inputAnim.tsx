@@ -34,10 +34,10 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
           <label 
             htmlFor={inputId}
             className={`absolute left-3 top-2 px-1 text-base bg-inherit text-gray-600 tracking-wide 
-              duration-200 pointer-events-none peer-focus:top-1 peer-focus:text-sm
+              duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-sm
               peer-focus:text-blue-600 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
               ${error ? 'text-red-500 peer-focus:text-red-600' : ''}
-              bg-transparent transform peer-focus:-translate-y-4 peer-valid:-translate-y-5`}
+              bg-transparent transform peer-focus:-translate-y-5 peer-valid:-translate-y-5`}
           >
             {label}
             {required && <span className="text-red-500 ml-1">*</span>}
