@@ -3,9 +3,9 @@
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { MdOutlineMail } from "react-icons/md";
-import { RiLockPasswordLine } from "react-icons/ri";
-import { DivInputIcon } from "../ui/DivInputIcon";
+// import { MdOutlineMail } from "react-icons/md";
+// import { RiLockPasswordLine } from "react-icons/ri";
+// import { DivInputIcon } from "../ui/DivInputIcon";
 import { Button } from "../ui/ButtonForm";
 import { InputAt } from "../ui/inputAnim";
 
@@ -38,21 +38,21 @@ export default function LoginForm() {
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold cursor-default">Login</h1>
         <div className="h-full w-full">
           <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-full justify-items-start pt-8 relative">
-            <DivInputIcon
+            <InputAt
+              label="E-mail"
               id="email"
               type="email"
-              placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              icon={MdOutlineMail}
+              // icon={MdOutlineMail}
             />
-            <DivInputIcon
+            <InputAt
+              label="Senha"
               id="password"
               type="password" 
-              placeholder="Senha" 
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              icon={RiLockPasswordLine}
+              // icon={RiLockPasswordLine}
             />
             <InputAt
               required
