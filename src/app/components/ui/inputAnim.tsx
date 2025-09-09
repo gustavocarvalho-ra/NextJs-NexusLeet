@@ -13,7 +13,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
     const inputName = name || inputId;
 
     return (
-      <div className="relative flex flex-col">
+      <div className="relative flex flex-col w-full h-full">
         <input 
           ref={ref}
           id={inputId}
