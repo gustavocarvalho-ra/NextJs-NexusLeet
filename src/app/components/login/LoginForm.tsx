@@ -37,24 +37,27 @@ export default function LoginForm() {
       <div className="border-2 border-(--text-amber) rounded-lg bg-slate-500/15 p-3 w-xl h-2/6 flex flex-col justify-center">
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold cursor-default">Login</h1>
         <div className="h-full w-full">
-          <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-full justify-items-start pt-8 relative">
+          <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-full justify-center pt-8 relative">
             <InputAt
+              required
+              className="w-3/4 bg-slate-500/15"
               label="E-mail"
-              id="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               // icon={MdOutlineMail}
             />
             <InputAt
+              required
+              className="w-3/4 bg-slate-500/15"
               label="Senha"
-              id="password"
               type="password" 
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               // icon={RiLockPasswordLine}
             />
             <InputAt
+              className="w-3/4 bg-slate-500/15"
               required
               label="Nome"
               type="name"
