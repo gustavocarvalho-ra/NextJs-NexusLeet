@@ -28,7 +28,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label 
             htmlFor={inputId}
-            className={`absolute left-3 top-2 px-1 text-base bg-inherit text-gray-600 tracking-wide 
+            className={`absolute left-3 top-2 px-1 text-base bg-[#17181a] text-gray-600 tracking-wide 
               duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-sm
               peer-focus:text-blue-600 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
               ${error ? 'text-red-500 peer-focus:text-red-600' : ''}
