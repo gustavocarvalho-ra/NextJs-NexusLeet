@@ -34,7 +34,7 @@ export default function LoginForm() {
 
   return (
     <div className="w-full h-full flex items-center justify-center">
-      <div className="border-2 border-(--text-amber) rounded-lg bg-[#17181a] p-3 w-xl h-2/6 flex flex-col justify-center">
+      <div className="border-2 border-(--text-amber) rounded-lg bg-(--back-alf) p-3 w-xl h-2/6 flex flex-col justify-center">
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold cursor-default">Login</h1>
         <div className="h-full w-full">
           <form onSubmit={handleLogin} className="gap-5 flex flex-col items-center h-full justify-start pt-8 relative ">
