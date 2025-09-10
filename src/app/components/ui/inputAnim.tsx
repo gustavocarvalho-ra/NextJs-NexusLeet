@@ -13,7 +13,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
     const inputName = name || inputId;
 
     return (
-      <div className={`${className} relative flex flex-col bg-red-400`}>
+      <div className={`${className} relative flex flex-col bg-red-400 rounded-tl-[20px] rounded-tr-[2px] rounded-bl-[2px] rounded-br-[20px] border-2 border-(--text-amber)`}>
         <input 
           ref={ref}
           id={inputId}
@@ -21,11 +21,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
           type={type}
           required={required}
           placeholder={placeholder || ' '}
-          className={`px-4 py-3 w-full h-full text-base outline-none border-2 rounded transition-all duration-200 peer 
-            ${error 
-              ? 'border-red-500 focus:border-red-700' 
-              : 'border-gray-400 hover:border-gray-600 focus:border-blue-600'
-            }`}
+          className={`px-4 py-3 w-full h-full text-base outline-none border-2 rounded transition-all duration-200 peer border-none`}
           {...props}
         />
         
