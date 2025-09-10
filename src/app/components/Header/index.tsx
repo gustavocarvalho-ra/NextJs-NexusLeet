@@ -15,7 +15,7 @@ export default async function Header() {
 
   if (!session) {
     return (
-      <div className="w-screen min-h-21 bg-(--back) flex flex-col justify-center">
+      <div className="w-screen min-h-21 bg-(--bg-black) flex flex-col justify-center">
         <div className="w-full flex justify-evenly items-center">
           <Link href={"/"} className="text-(--text-amber) font-black text-4xl">
             Nexus Leet

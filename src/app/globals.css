@@ -5,6 +5,7 @@
   --back: #1b1c1e;
   --bkz: #303030;
   --background: #fae6d6;
+  --bg-black: #040507;
   --bg-white: #ededed;
   --bg-sec: #e9e4e9;
   --text-amber: #e17100;
@@ -29,7 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  background: var(--bg-white);
+  background: var(--back);
 }
 
 * {

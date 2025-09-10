@@ -21,7 +21,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
           type={type}
           required={required}
           placeholder={placeholder || ' '}
-          className={`px-4 py-3 text-base outline-none border-2 rounded transition-all duration-200 peer 
+          className={`px-4 py-3 w-full h-full text-base outline-none border-2 rounded transition-all duration-200 peer 
             ${error 
               ? 'border-red-500 focus:border-red-700' 
               : 'border-gray-400 hover:border-gray-600 focus:border-blue-600'
