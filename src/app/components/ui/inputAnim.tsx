@@ -21,7 +21,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
           type={type}
           required={required}
           placeholder={placeholder || ' '}
-          className={`px-4 py-3 w-full h-full text-base outline-none border-2 rounded transition-all duration-200 peer border-none`}
+          className={`px-4 py-3 w-full h-full text-base outline-none border-2 rounded transition-all duration-200 peer border-none text-(--bg-white)`}
           {...props}
         />
         
@@ -32,7 +32,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
               duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-sm
               peer-focus:text-(--text-amber) peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-(--text-amber)
               ${error ? 'text-red-500 peer-focus:text-red-600' : ''}
-              transform peer-focus:-translate-y-5 peer-valid:-translate-y-5`}
+              transform peer-focus:-translate-y-5 peer-valid:-translate-y-5 peer-valid:text-(--text-amber)`}
           >
             {label}
             {required && <span className="text-red-500 ml-1">*</span>}
