@@ -30,7 +30,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
             htmlFor={inputId}
             className={`absolute left-3 top-2 px-1 text-base bg-(--back-alf) text-gray-600 tracking-wide 
               duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-sm
-              peer-focus:text-blue-600 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+              peer-focus:text-(--text-amber) peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-(--text-amber)
               ${error ? 'text-red-500 peer-focus:text-red-600' : ''}
               transform peer-focus:-translate-y-5 peer-valid:-translate-y-5`}
           >
