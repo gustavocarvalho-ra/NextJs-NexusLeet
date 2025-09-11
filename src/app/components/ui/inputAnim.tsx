@@ -3,10 +3,11 @@ import React, { InputHTMLAttributes } from 'react';
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
+  icon: React.ComponentType<{ className?: string }>;
 }
 
 const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, id, name, label, error, placeholder, required, ...props }, ref) => {
+  ({ className, type, id, name, label, error, placeholder, required, icon: IconComponent, ...props }, ref) => {
     
     const generatedId = React.useId();
     const inputId = id || name || generatedId;
@@ -38,6 +39,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
             {required && <span className="text-red-500 ml-1">*</span>}
           </label>
         )}
+        <IconComponent />
         
         {error && (
           <span className="text-red-500 text-sm mt-1">{error}</span>
