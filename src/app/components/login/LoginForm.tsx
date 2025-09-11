@@ -8,6 +8,8 @@ import { useState } from "react";
 // import { DivInputIcon } from "../ui/DivInputIcon";
 import { Button } from "../ui/ButtonForm";
 import { InputAt } from "../ui/inputAnim";
+import { MdOutlineMail } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
 
 
 
@@ -45,7 +47,7 @@ export default function LoginForm() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              // icon={MdOutlineMail}
+              icon={MdOutlineMail}
             />
             <InputAt
               required
@@ -54,7 +56,7 @@ export default function LoginForm() {
               type="password" 
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              // icon={RiLockPasswordLine}
+              icon={RiLockPasswordLine}
             />
             <Button type="submit">
               Entrar
