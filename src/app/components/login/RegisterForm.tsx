@@ -57,7 +57,7 @@ export default function RegisterForm() {
 
   return (
     <div className="w-full h-full flex items-center justify-center">
-      <div className="border-2 border-(--text-amber) rounded-lg bg-slate-500/15 p-3 w-xl h-1/2 flex flex-col justify-center">
+      <div className="border-2 border-(--text-amber) rounded-lg bg-(--back-alf) p-3 w-xl h-1/2 flex flex-col justify-center">
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold cursor-default">Cadastro</h1>
         <div className="h-full w-full">
           <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-full justify-items-start pt-8 relative">
