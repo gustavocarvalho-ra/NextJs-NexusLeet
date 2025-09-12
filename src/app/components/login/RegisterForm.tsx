@@ -4,12 +4,12 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { signIn } from 'next-auth/react';
 import { Input } from "../ui/Input";
-import { DivInputIcon } from "../ui/DivInputIcon";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { PiEye } from "react-icons/pi";
 import { PiEyeClosedLight } from "react-icons/pi";
 import { Button } from "../ui/ButtonForm";
+import { InputAt } from "../ui/inputAnim";
 
 
 export default function RegisterForm() {
@@ -61,20 +61,20 @@ export default function RegisterForm() {
         <h1 className="flex justify-center text-(--text-amber) text-3xl font-semibold cursor-default">Cadastro</h1>
         <div className="h-full w-full">
           <form onSubmit={handleSubmit} className="gap-5 flex flex-col items-center h-full justify-items-start pt-8 relative">
-            <DivInputIcon
-              id="name"
-              type={"text"}
-              placeholder="Nome"
+            <InputAt
               required
+              className="w-3/4"
+              type="text"
+              label="Nome"
               value={form.name}
               onChange={(e) => setForm({...form, name: e.target.value})}
               icon={FaRegUser}
               />
-            <DivInputIcon
-              id="email"
-              type="email"
-              placeholder="E-mail"
+            <InputAt
               required
+              className="w-3/4"
+              label="E-mail"
+              type="email"
               value={form.email}
               onChange={(e) => setForm({...form, email: e.target.value})}
               icon={MdOutlineMail}
