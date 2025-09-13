@@ -80,7 +80,7 @@ export default function RegisterForm() {
               icon={MdOutlineMail}
             />
             <div className="border-b-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
-              <Input
+              <InputAt
                 id="password"
                 type={showPassword ? "text" : "password"}
                 placeholder="Senha"
@@ -98,10 +98,10 @@ export default function RegisterForm() {
               </button>
             </div>
             <div className="border-b-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
-              <Input
+              <InputAt
                 id="confirmPassword"
                 type={showConfirmPassword ? "text" : "password"}
-                placeholder="Confirme sua senha"
+                label="Confirme sua senha"
                 required
                 value={form.confirmPassword}
                 onChange={(e) => setForm({...form, confirmPassword: e.target.value})}
