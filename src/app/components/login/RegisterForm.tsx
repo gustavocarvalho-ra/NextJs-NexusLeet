@@ -83,10 +83,11 @@ export default function RegisterForm() {
               <InputAt
                 id="password"
                 type={showPassword ? "text" : "password"}
-                placeholder="Senha"
+                label="Senha"
                 required
                 value={form.password}
                 onChange={(e) => setForm({...form, password: e.target.value})}
+                icon={MdOutlineMail}
               />
               <button
                 type="button"
@@ -105,6 +106,7 @@ export default function RegisterForm() {
                 required
                 value={form.confirmPassword}
                 onChange={(e) => setForm({...form, confirmPassword: e.target.value})}
+                icon={MdOutlineMail}
                 />
               <button
                 type="button"
