@@ -7,7 +7,6 @@ import { PiEyeClosedLight } from "react-icons/pi";
 import { PiEye } from "react-icons/pi";
 import { signIn } from 'next-auth/react';
 import { useRouter } from "next/navigation"
-import { Input } from "../ui/Input";
 import { Button } from "../ui/ButtonForm";
 import { InputAt } from "../ui/inputAnim";
 
@@ -79,7 +78,7 @@ export default function RegisterForm() {
               onChange={(e) => setForm({...form, email: e.target.value})}
               icon={MdOutlineMail}
             />
-            <div className="border-b-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
+            <div className="border-b-2 hover:border-(--text-amber) bg-(--back-alf) rounded-sm p-2 h-11 w-2/3 flex items-center">
               <InputAt
                 id="password"
                 type={showPassword ? "text" : "password"}
@@ -98,7 +97,7 @@ export default function RegisterForm() {
                 {showPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>}
               </button>
             </div>
-            <div className="border-b-2 hover:border-(--text-amber) bg-(--color-sec) rounded-sm p-2 h-11 w-2/3 flex items-center">
+            <div className="border-b-2 hover:border-(--text-amber) bg-(--back-alf) rounded-sm p-2 h-11 w-2/3 flex items-center">
               <InputAt
                 id="confirmPassword"
                 type={showConfirmPassword ? "text" : "password"}
