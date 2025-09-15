@@ -7,7 +7,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, id, name, label, error, placeholder, required, icon: IconComponent, ...props }, ref) => {
+  ({ className, type, id, name, label, error, placeholder, required, icon: IconComponent, children, ...props }, ref) => {
     
     const generatedId = React.useId();
     const inputId = id || name || generatedId;
@@ -15,32 +15,36 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div className={`${className} relative flex items-center bg-inherit rounded-tl-[20px] rounded-tr-[2px] rounded-bl-[2px] rounded-br-[20px] border-2 border-(--text-amber)`}>
-        <input 
-          ref={ref}
-          id={inputId}
-          name={inputName}
-          type={type}
-          required={required}
-          placeholder={placeholder || ' '}
-          className={`px-4 py-3 w-full h-full text-base outline-none border-2 rounded transition-all duration-200 peer border-none text-(--bg-white)`}
-          {...props}
-        />
-        
-        {label && (
-          <label 
-            htmlFor={inputId}
-            className={`absolute left-3 top-2 px-1 text-base bg-(--back-alf) text-gray-600 tracking-wide 
-              duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-sm
-              peer-focus:text-(--text-amber) peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-(--text-amber)
-              ${error ? 'text-red-500 peer-focus:text-red-600' : ''}
-              transform peer-focus:-translate-y-5 peer-valid:-translate-y-5 peer-valid:text-(--text-amber)`}
-          >
-            {label}
-            {required && <span className="text-red-500 ml-1">*</span>}
-          </label>
-        )}
-        <IconComponent className="text-2xl text-(--text-amber) mr-4" />
-        
+        <div>
+          <input 
+            ref={ref}
+            id={inputId}
+            name={inputName}
+            type={type}
+            required={required}
+            placeholder={placeholder || ' '}
+            className={`px-4 py-3 w-full h-full text-base outline-none border-2 rounded transition-all duration-200 peer border-none text-(--bg-white)`}
+            {...props}
+          />
+          
+          {label && (
+            <label 
+              htmlFor={inputId}
+              className={`absolute left-3 top-2 px-1 text-base bg-(--back-alf) text-gray-600 tracking-wide 
+                duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-sm
+                peer-focus:text-(--text-amber) peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-(--text-amber)
+                ${error ? 'text-red-500 peer-focus:text-red-600' : ''}
+                transform peer-focus:-translate-y-5 peer-valid:-translate-y-5 peer-valid:text-(--text-amber)`}
+            >
+              {label}
+              {required && <span className="text-red-500 ml-1">*</span>}
+            </label>
+          )}
+          <IconComponent className="text-2xl text-(--text-amber) mr-4" />
+        </div>
+
+          {children}
+
         {error && (
           <span className="text-red-500 text-sm mt-1">{error}</span>
         )}
