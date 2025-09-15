@@ -68,7 +68,7 @@ export default function RegisterForm() {
               value={form.name}
               onChange={(e) => setForm({...form, name: e.target.value})}
               icon={FaRegUser}
-              />
+            />
             <InputAt
               required
               className="w-3/4"
@@ -78,50 +78,44 @@ export default function RegisterForm() {
               onChange={(e) => setForm({...form, email: e.target.value})}
               icon={MdOutlineMail}
             />
-            <div className="border-b-2 hover:border-(--text-amber) bg-(--back-alf) rounded-sm p-2 h-11 w-2/3 flex items-center">
-              <InputAt
-                id="password"
-                type={showPassword ? "text" : "password"}
-                label="Senha"
-                required
-                value={form.password}
-                onChange={(e) => setForm({...form, password: e.target.value})}
-                icon={MdOutlineMail}
-                
-              >
-                {
-                  <button
-                    type="button"
-                    tabIndex={-1}
-                    className=""
-                    onClick={() => setShowPassword(!showPassword)}
-                  >
-                    {showPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>} 
-                  </button> 
-                }
-              </InputAt>
-            </div>
-            <div className="border-b-2 hover:border-(--text-amber) bg-(--back-alf) rounded-sm p-2 h-11 w-2/3 flex items-center">
-              <InputAt
-                id="confirmPassword"
-                type={showConfirmPassword ? "text" : "password"}
-                label="Confirme sua senha"
-                required
-                value={form.confirmPassword}
-                onChange={(e) => setForm({...form, confirmPassword: e.target.value})}
-                icon={MdOutlineMail}
-                >
-
+            <InputAt
+              id="password"
+              type={showPassword ? "text" : "password"}
+              label="Senha"
+              required
+              value={form.password}
+              onChange={(e) => setForm({...form, password: e.target.value})}
+              icon={MdOutlineMail}
+            >
+              {
                 <button
                   type="button"
                   tabIndex={-1}
                   className=""
-                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  onClick={() => setShowPassword(!showPassword)}
                 >
-                  {showConfirmPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>}
-                </button>
-              </InputAt>
-            </div>
+                  {showPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>} 
+                </button> 
+              }
+            </InputAt>
+            <InputAt
+              id="confirmPassword"
+              type={showConfirmPassword ? "text" : "password"}
+              label="Confirme sua senha"
+              required
+              value={form.confirmPassword}
+              onChange={(e) => setForm({...form, confirmPassword: e.target.value})}
+              icon={MdOutlineMail}
+            >
+              <button
+                type="button"
+                tabIndex={-1}
+                className=""
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              >
+                {showConfirmPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>}
+              </button>
+            </InputAt>
             <Button type="submit">
               Cadastrar
             </Button>
