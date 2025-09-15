@@ -15,7 +15,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div className={`${className} relative flex items-center bg-inherit rounded-tl-[20px] rounded-tr-[2px] rounded-bl-[2px] rounded-br-[20px] border-2 border-(--text-amber)`}>
-        <div>
+        <div className='flex items-center'>
           <input 
             ref={ref}
             id={inputId}
