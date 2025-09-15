@@ -80,6 +80,7 @@ export default function RegisterForm() {
             />
             <InputAt
               id="password"
+              className="w-3/4"
               type={showPassword ? "text" : "password"}
               label="Senha"
               required
@@ -100,6 +101,7 @@ export default function RegisterForm() {
             </InputAt>
             <InputAt
               id="confirmPassword"
+              className="w-3/4"
               type={showConfirmPassword ? "text" : "password"}
               label="Confirme sua senha"
               required
