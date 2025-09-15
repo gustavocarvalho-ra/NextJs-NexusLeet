@@ -87,15 +87,19 @@ export default function RegisterForm() {
                 value={form.password}
                 onChange={(e) => setForm({...form, password: e.target.value})}
                 icon={MdOutlineMail}
-              />
-              <button
-                type="button"
-                tabIndex={-1}
-                className=""
-                onClick={() => setShowPassword(!showPassword)}
+                
               >
-                {showPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>}
-              </button>
+                {
+                  <button
+                    type="button"
+                    tabIndex={-1}
+                    className=""
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>} 
+                  </button> 
+                }
+              </InputAt>
             </div>
             <div className="border-b-2 hover:border-(--text-amber) bg-(--back-alf) rounded-sm p-2 h-11 w-2/3 flex items-center">
               <InputAt
@@ -106,15 +110,17 @@ export default function RegisterForm() {
                 value={form.confirmPassword}
                 onChange={(e) => setForm({...form, confirmPassword: e.target.value})}
                 icon={MdOutlineMail}
-                />
-              <button
-                type="button"
-                tabIndex={-1}
-                className=""
-                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              >
-                {showConfirmPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>}
-              </button>
+                >
+
+                <button
+                  type="button"
+                  tabIndex={-1}
+                  className=""
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                >
+                  {showConfirmPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>}
+                </button>
+              </InputAt>
             </div>
             <Button type="submit">
               Cadastrar
