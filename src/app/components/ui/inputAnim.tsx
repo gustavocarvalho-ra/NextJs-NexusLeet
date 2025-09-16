@@ -3,7 +3,7 @@ import React, { InputHTMLAttributes } from 'react';
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon?: React.ComponentType<{ className?: string }>;
 }
 
 const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
@@ -40,7 +40,7 @@ const InputAt = React.forwardRef<HTMLInputElement, InputProps>(
               {required && <span className="text-red-500 ml-1">*</span>}
             </label>
           )}
-          <IconComponent className="text-2xl text-(--text-amber) mr-4" />
+          {IconComponent && <IconComponent className="text-2xl text-(--text-amber) mr-4" />}
         </div>
 
           {children}
