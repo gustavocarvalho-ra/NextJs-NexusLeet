@@ -112,7 +112,7 @@ export default function RegisterForm() {
               <button
                 type="button"
                 tabIndex={-1}
-                className=""
+                className="w-1/12"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
                 {showConfirmPassword ? <PiEye className="text-2xl hover:text-(--text-amber) cursor-pointer"/> : <PiEyeClosedLight className="text-2xl hover:text-(--text-amber) cursor-pointer"/>}
