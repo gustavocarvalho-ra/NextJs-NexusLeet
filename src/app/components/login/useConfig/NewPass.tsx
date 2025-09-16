@@ -42,6 +42,7 @@ export default function ChangePasswordForm() {
           
           <div className="w-full h-full relative flex flex-col gap-3 justify-items-center">
             <InputAt
+              required
               type="password" 
               placeholder="Senha atual"
               value={form.currentPassword}
@@ -50,6 +51,7 @@ export default function ChangePasswordForm() {
             />
 
             <InputAt
+              required
               type="password"
               placeholder="Nova senha"
               value={form.newPassword}
@@ -58,6 +60,7 @@ export default function ChangePasswordForm() {
             />
 
             <InputAt
+              required
               type="password"
               placeholder="Confirme a nova senha"
               value={form.confirmNewPassword}
