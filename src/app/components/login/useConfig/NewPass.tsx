@@ -54,7 +54,7 @@ export default function ChangePasswordForm() {
               placeholder="Nova senha"
               value={form.newPassword}
               onChange={(e) => setForm({...form, newPassword: e.target.value})}
-              className="h-1/6 border-2 hover:border-(--text-amber) bg-(--color-sec)"
+              className="border-2 hover:border-(--text-amber) bg-(--color-sec)"
             />
 
             <InputAt
