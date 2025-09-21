@@ -32,7 +32,7 @@ export default async function MyAccontUser() {
               </div>
               <div className='flex flex-col text-(--color-sec)'>
                 <p className='font-semibold'>{session.user?.name}</p>
-                <p className='font-normal'>{session.user?.email}</p>
+                <p className='font-extralight'>{session.user?.email}</p>
               </div>
             </div>
             <div className='flex gap-6 flex-wrap'>
