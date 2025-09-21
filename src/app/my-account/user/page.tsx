@@ -31,7 +31,7 @@ export default async function MyAccontUser() {
                 <Image className='absolute' src={"/iduser.jpeg"} layout="fill" objectFit="cover" alt='Imagem de usuário' />
               </div>
               <div className='flex flex-col text-(--color-sec)'>
-                <p className='font-semibold'>{session.user?.name}</p>
+                <p className='font-extrabold'>{session.user?.name}</p>
                 <p className='font-extralight'>{session.user?.email}</p>
               </div>
             </div>
