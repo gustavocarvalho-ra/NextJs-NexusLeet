@@ -6,13 +6,14 @@ interface CardInt {
   TextStr: React.ReactNode;
   AboutStr: React.ReactNode;
   href: string;
+  className?:  string;
 }
 
-export default function CardUserConfg({icon, TextStr, AboutStr, href}: CardInt) {
+export default function CardUserConfg({icon, TextStr, AboutStr, href, className}: CardInt) {
   return (
     <Link 
       href={href} 
-      className="w-[32%] h-36 bg-(--mod) flex flex-col justify-center rounded-lg p-3.5 shadow-lg/20 transition duration-300 ease-in-out  hover:shadow-lg/30 cursor-pointer hover:bg-(--text-amber)">
+      className={`w-[32%] h-36 bg-(--mod) flex flex-col justify-center rounded-lg p-3.5 shadow-lg/20 transition duration-300 ease-in-out  hover:shadow-lg/30 cursor-pointer hover:bg-(--text-amber) ${className}`}>
 
       <div className="w-full h-full">
         <h1 className="font-black h-1/4 text-xl">{icon}</h1>
