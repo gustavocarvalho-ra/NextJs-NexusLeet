@@ -57,18 +57,21 @@ export default async function MyAccontUser() {
                 AboutStr="Configurações para mudança de senha, nome e e-mail."
               />
               <CardUserConfg
+                className="hover:bg-red-500"
                 href='/'
                 icon={<MdLocationOn />}
                 TextStr="Entrega"
                 AboutStr="Dados de endereço de entrega."
               />
               <CardUserConfg
+                className="hover:bg-red-500"
                 href='/'
                 icon={<FaRegCreditCard />}
                 TextStr="Cartões"
                 AboutStr="Cartões para meio de pagamento."
               />
               <CardUserConfg
+                className="hover:bg-red-500"
                 href='/'
                 icon={<MdOutlinePrivacyTip />}
                 TextStr="Privacidade"
