@@ -44,6 +44,7 @@ export default async function MyAccontUser() {
               />
 
               <CardUserConfg
+                className="hover:bg-red-500"
                 href='/'
                 icon={<FaUnlockAlt />}
                 TextStr="Segurança"
