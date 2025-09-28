@@ -52,7 +52,7 @@ export default function DeleteAccountModal() {
         <div className="w-1/4 h-1/4 fixed mt-30 flex items-center justify-center bg-slate-500/15 rounded-lg">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col items-center gap-3">
-              <h2 className="text-lg font-medium">Coloque sua senha para confirmar.</h2>
+              <h2 className="text-lg font-medium">Digite sua senha para confirmar.</h2>
 
               <input 
                 className="w-3/4 bg-(--bg-white) rounded-lg p-0.5 pl-3" 
